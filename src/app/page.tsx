@@ -1,7 +1,7 @@
 export default function Home() {
 	return (
 		<main className="">
-			<section></section>
+			<section>Section</section>
 		</main>
 	);
 }
