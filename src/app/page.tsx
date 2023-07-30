@@ -5,7 +5,7 @@ export default function Home() {
 		<>
 			<Header />
 			<main className="">
-				<section>Section</section>
+				<div className="min-h-screen bg-gray-400">asd</div>
 			</main>
 		</>
 	);

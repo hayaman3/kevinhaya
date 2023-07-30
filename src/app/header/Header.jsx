@@ -1,17 +1,28 @@
-// 'use client';
-import React, { useState } from 'react';
-import './header.css';
+'use client';
+import React, { useState, useEffect } from 'react';
+// import './header.css';
 
 function Header() {
 	// change background
-	window.addEventListener('scroll', () => {
-		const header = document.querySelector('.header');
-		if (window.scrollY >= 80) {
-			header.classList.add('scroll-header');
-		} else {
-			header.classList.remove('scroll-header');
-		}
-	});
+	// window.addEventListener('scroll', () => {
+	// 	const header = document.querySelector('.header');
+	// 	if (window.scrollY >= 80) {
+	// 		header.classList.add('scroll-header');
+	// 	} else {
+	// 		header.classList.remove('scroll-header');
+	// 	}
+	// });
+
+	useEffect(() => {
+		window.addEventListener('scroll', () => {
+			const header = document.querySelector('.header');
+			if (window.scrollY >= 80) {
+				header.classList.add('scroll-header');
+			} else {
+				header.classList.remove('scroll-header');
+			}
+		});
+	}, []); // no dependencies
 
 	// toggle menu
 	const [toggle, showMenu] = useState(false);
@@ -21,7 +32,7 @@ function Header() {
 		<header className="header">
 			<nav className="nav container">
 				<a href="index.html" className="nav-logo">
-					&lt; kevin / &gt;
+					&lt; Kevin / &gt;
 				</a>
 				<div className={toggle ? 'nav-menu show-menu' : 'nav-menu'}>
 					<ul className="nav-list">
