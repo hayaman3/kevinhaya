@@ -1,15 +1,15 @@
 'use client';
+import classNames from 'classnames';
 import React, { useState, useEffect } from 'react';
 // import './header.css';
 
 function Header() {
 	useEffect(() => {
 		window.addEventListener('scroll', () => {
-			const header = document.querySelector('.header');
 			if (window.scrollY >= 80) {
-				header.classList.add('scroll-header');
+				setheaderShadow(true);
 			} else {
-				header.classList.remove('scroll-header');
+				setheaderShadow(false);
 			}
 		});
 	}, []); // no dependencies
@@ -17,9 +17,19 @@ function Header() {
 	// toggle menu
 	const [toggle, showMenu] = useState(false);
 	const [activeNav, setActiveNav] = useState('#home');
+	const [headerShadow, setheaderShadow] = useState(false);
 
 	return (
-		<header className="header">
+		<header
+			className={classNames(
+				'w-full',
+				'bg-zinc-50',
+				'fixed',
+				'top-0',
+				'left-0',
+				'z-50',
+				headerShadow ? 'shadow-[0 -1px 4px rgba(0, 0, 0, 0.15)]' : 'shadow-none'
+			)}>
 			<nav className="nav container">
 				<a href="index.html" className="nav-logo">
 					&lt; Kevin / &gt;
