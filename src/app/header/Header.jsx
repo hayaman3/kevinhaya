@@ -30,12 +30,19 @@ function Header() {
 				'z-50',
 				headerShadow ? 'shadow-[0 -1px 4px rgba(0, 0, 0, 0.15)]' : 'shadow-none'
 			)}>
-			<nav className="nav container">
-				<a href="index.html" className="nav-logo">
-					&lt; Kevin / &gt;
-				</a>
+			<nav
+				className="
+					h-[calc(var(--header-height)+1.5rem)] 
+					flex justify-between 
+					items-center
+					gap-x-4
+					container
+			">
+				<div className="text-title">&lt; Kevin / &gt;</div>
+				{/* TODO */}
 				<div className={toggle ? 'nav-menu show-menu' : 'nav-menu'}>
-					<ul className="nav-list">
+					{/* <ul className="nav-list"> */}
+					<ul className="mt-0 grid grid-cols-3 gap-8">
 						<li className="nav-item">
 							<a
 								href="#home"

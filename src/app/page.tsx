@@ -4,8 +4,8 @@ export default function Home() {
 	return (
 		<>
 			<Header />
-			<main className="">
-				<div className="min-h-[200vh] bg-zinc-400">asd</div>
+			<main>
+				<div className="min-h-[200vh] bg-zinc-100">asd</div>
 			</main>
 		</>
 	);
