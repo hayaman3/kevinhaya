@@ -35,11 +35,11 @@ function Header() {
     >
       <nav
         className="
-					container 
-					flex 
+          container
+          flex
 					h-[calc(var(--header-height)+1.5rem)] 
 					items-center
-					justify-between
+					justify-between 
 					gap-x-4
 			"
       >
@@ -47,21 +47,16 @@ function Header() {
         {/* <div className={toggle ? 'nav-menu show-menu' : 'nav-menu'}> */}
         <div
           className={classNames(
-            "sm:fixed",
-            "sm:-bottom-full",
-            "sm:left-0",
-            "sm:w-full",
-            "sm:px-6",
-            "sm:bg-zinc-50",
-            "sm:pt-2",
-            "sm:py-12",
-            "sm:shadow-[0 -1px 4px rgba(0, 0, 0, 0.15)]",
-            "xs:pt-8",
-            "xs:px-1",
-            "xs:pb-12",
-            toggle
-              ? "sm:shadow-[0 -1px 4px rgba(0, 0, 0, 0.15)]"
-              : "sm:shadow-none",
+            "fixed",
+            "-bottom-full",
+            "left-0",
+            "w-full",
+            "px-6",
+            "bg-zinc-50",
+            "pt-2",
+            "py-12",
+            "shadow-[0 -1px 4px rgba(0, 0, 0, 0.15)]",
+            toggle ? "shadow-[0 -1px 4px rgba(0, 0, 0, 0.15)]" : "shadow-none",
           )}
         >
           {/* <ul className="nav-list"> */}
