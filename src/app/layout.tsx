@@ -1,22 +1,21 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
-
-const poppins = Poppins({ weight: '400', subsets: ['latin'] });
+import "./globals.css";
+import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
+const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: '<Kevin/>',
-	description: 'Kevin Larry Haya Portfolio',
+  title: "<Kevin/>",
+  description: "Kevin Larry Haya Portfolio",
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: {
-	children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-	return (
-		<html lang="en">
-			<body className={poppins.className}>{children}</body>
-		</html>
-	);
+  return (
+    <html lang="en">
+      <body className={poppins.className}>{children}</body>
+    </html>
+  );
 }

@@ -1,7 +1,15 @@
 "use client";
 import classNames from "classnames";
 import React, { useState, useEffect } from "react";
-// import './header.css';
+import {
+  GoHome,
+  GoPerson,
+  GoProjectRoadmap,
+  GoImage,
+  GoMail,
+  GoX,
+} from "react-icons/go";
+import { GrAppsRounded } from "react-icons/gr";
 
 function Header() {
   useEffect(() => {
@@ -12,12 +20,20 @@ function Header() {
         setheaderShadow(false);
       }
     });
-  }, []); // no dependencies
+  }, []);
 
   // toggle menu
   const [toggle, showMenu] = useState(false);
   const [activeNav, setActiveNav] = useState("#home");
   const [headerShadow, setheaderShadow] = useState(false);
+
+  const iconClass = classNames(
+    // hidden
+    "bg-zinc-50",
+    "text-xl",
+    "sm:block",
+    "sm:text-sm",
+  );
 
   return (
     <header
@@ -34,6 +50,7 @@ function Header() {
       )}
     >
       <nav
+        aria-labelledby="page navigation"
         className="
 					container 
 					flex 
@@ -43,8 +60,7 @@ function Header() {
 					gap-x-4
 			"
       >
-        <div className="text-title">&lt; Kevin / &gt;</div>
-        {/* <div className={toggle ? 'nav-menu show-menu' : 'nav-menu'}> */}
+        <h1 className="font-bold text-title">&lt; Kevin / &gt;</h1>
         <div
           className={classNames(
             "sm:fixed",
@@ -64,8 +80,7 @@ function Header() {
               : "sm:shadow-none",
           )}
         >
-          {/* <ul className="nav-list"> */}
-          <ul className="mt-0 grid grid-cols-3 gap-8">
+          <ul className="mt-5 flex gap-x-8 sm:mt-0 sm:grid sm:grid-cols-3 sm:gap-8 xs:gap-0">
             <li className="nav-item">
               <a
                 href="#home"
@@ -74,7 +89,7 @@ function Header() {
                   activeNav === "#home" ? "nav-link active-link" : "nav-link"
                 }
               >
-                <i className="uil uil-estate nav-icon" />
+                <GoHome className={iconClass} />
                 Home
               </a>
             </li>
@@ -87,7 +102,7 @@ function Header() {
                   activeNav === "#about" ? "nav-link active-link" : "nav-link"
                 }
               >
-                <i className="uil uil-user nav-icon" />
+                <GoPerson className={iconClass} />
                 About
               </a>
             </li>
@@ -100,7 +115,7 @@ function Header() {
                   activeNav === "#skills" ? "nav-link active-link" : "nav-link"
                 }
               >
-                <i className="uil uil-file-alt nav-icon" />
+                <GoProjectRoadmap className={iconClass} />
                 Skills
               </a>
             </li>
@@ -115,7 +130,7 @@ function Header() {
                     : "nav-link"
                 }
               >
-                <i className="uil uil-scenery nav-icon" />
+                <GoImage className={iconClass} />
                 Portfolio
               </a>
             </li>
@@ -128,21 +143,23 @@ function Header() {
                   activeNav === "#contact" ? "nav-link active-link" : "nav-link"
                 }
               >
-                <i className="uil uil-message nav-icon" />
+                <GoMail className={iconClass} />
                 Contact
               </a>
             </li>
           </ul>
           <button onClick={() => showMenu(!toggle)} type="button">
-            <i className="uil uil-times nav-close" />
+            {/* <i className="uil uil-times nav-close" /> */}
+            <GoX className={iconClass} />
           </button>
         </div>
         <button
-          className="nav-toggle"
+          // className="nav-toggle"
           onClick={() => showMenu(!toggle)}
           type="button"
         >
-          <i className="uil uil-apps" />
+          {/* <i className="uil uil-apps" /> */}
+          <GrAppsRounded className={iconClass} />
         </button>
       </nav>
     </header>
