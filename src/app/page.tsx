@@ -6,7 +6,7 @@ export default function Home() {
       <Header />
       <main>
         {/* <Sections class/> */}
-        <div className="min-h-[100vh] bg-zinc-100">asd</div>
+        <div className="min-h-[200vh] bg-zinc-100">asd</div>
       </main>
     </>
   );

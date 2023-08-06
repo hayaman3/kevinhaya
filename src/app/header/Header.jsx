@@ -22,18 +22,32 @@ function Header() {
     });
   }, []);
 
-  // toggle menu
-  const [toggle, showMenu] = useState(false);
+  const [showMenu, setToggleMenu] = useState(false);
   const [activeNav, setActiveNav] = useState("#home");
   const [headerShadow, setheaderShadow] = useState(false);
 
   const iconClass = classNames(
-    // hidden
+    "hidden",
     "bg-zinc-50",
     "text-xl",
     "sm:block",
     "sm:text-sm",
+    "hidden",
   );
+
+  const navLinkClass = classNames(
+    "flex",
+    "flex-col",
+    "items-center",
+    "text-base",
+    "text-title",
+    "font-medium",
+    "duration-300",
+    "hover:text-black",
+    "hover:scale-110",
+  );
+
+  const navActiveLinkClass = classNames("text-black", "scale-110", "underline");
 
   return (
     <header
@@ -42,11 +56,9 @@ function Header() {
         "fixed",
         "top-0",
         "left-0",
-        "z-50",
+        "z-100",
         "bg-zinc-50",
-        headerShadow
-          ? "shadow-[0 -1px 4px rgba(0, 0, 0, 0.15)]"
-          : "shadow-none",
+        headerShadow ? "shadow-[0px_-1px_4px_rgba(0,0,0,0.15)]" : "shadow-none",
       )}
     >
       <nav
@@ -71,12 +83,12 @@ function Header() {
             "sm:bg-zinc-50",
             "sm:pt-2",
             "sm:py-12",
-            "sm:shadow-[0 -1px 4px rgba(0, 0, 0, 0.15)]",
+            "sm:shadow-[0px_-1px_4px_rgba(0,0,0,0.15)]",
             "xs:pt-8",
             "xs:px-1",
             "xs:pb-12",
-            toggle
-              ? "sm:shadow-[0 -1px 4px rgba(0, 0, 0, 0.15)]"
+            showMenu
+              ? "shadow-[0px_-1px_4px_rgba(0,0,0,0.15)]"
               : "sm:shadow-none",
           )}
         >
@@ -85,9 +97,10 @@ function Header() {
               <a
                 href="#home"
                 onClick={() => setActiveNav("#home")}
-                className={
-                  activeNav === "#home" ? "nav-link active-link" : "nav-link"
-                }
+                className={classNames(
+                  navLinkClass,
+                  activeNav === "#home" ? navActiveLinkClass : "",
+                )}
               >
                 <GoHome className={iconClass} />
                 Home
@@ -98,9 +111,10 @@ function Header() {
               <a
                 href="#about"
                 onClick={() => setActiveNav("#about")}
-                className={
-                  activeNav === "#about" ? "nav-link active-link" : "nav-link"
-                }
+                className={classNames(
+                  navLinkClass,
+                  activeNav === "#about" ? navActiveLinkClass : "",
+                )}
               >
                 <GoPerson className={iconClass} />
                 About
@@ -111,9 +125,10 @@ function Header() {
               <a
                 href="#skills"
                 onClick={() => setActiveNav("#skills")}
-                className={
-                  activeNav === "#skills" ? "nav-link active-link" : "nav-link"
-                }
+                className={classNames(
+                  navLinkClass,
+                  activeNav === "#skills" ? navActiveLinkClass : "",
+                )}
               >
                 <GoProjectRoadmap className={iconClass} />
                 Skills
@@ -124,11 +139,10 @@ function Header() {
               <a
                 href="#portfolio"
                 onClick={() => setActiveNav("#portfolio")}
-                className={
-                  activeNav === "#portfolio"
-                    ? "nav-link active-link"
-                    : "nav-link"
-                }
+                className={classNames(
+                  navLinkClass,
+                  activeNav === "#portfolio" ? navActiveLinkClass : "",
+                )}
               >
                 <GoImage className={iconClass} />
                 Portfolio
@@ -139,23 +153,24 @@ function Header() {
               <a
                 href="#contact"
                 onClick={() => setActiveNav("#contact")}
-                className={
-                  activeNav === "#contact" ? "nav-link active-link" : "nav-link"
-                }
+                className={classNames(
+                  navLinkClass,
+                  activeNav === "#contact" ? navActiveLinkClass : "",
+                )}
               >
                 <GoMail className={iconClass} />
                 Contact
               </a>
             </li>
           </ul>
-          <button onClick={() => showMenu(!toggle)} type="button">
+          <button onClick={() => setToggleMenu(!showMenu)} type="button">
             {/* <i className="uil uil-times nav-close" /> */}
             <GoX className={iconClass} />
           </button>
         </div>
         <button
-          // className="nav-toggle"
-          onClick={() => showMenu(!toggle)}
+          // className="nav-showMenu"
+          onClick={() => setToggleMenu(!showMenu)}
           type="button"
         >
           {/* <i className="uil uil-apps" /> */}
