@@ -32,14 +32,14 @@ function Header() {
     "text-xl",
     "sm:block",
     "sm:text-sm",
-    "hidden",
+    "sm:block",
   );
 
   const navLinkClass = classNames(
     "flex",
     "flex-col",
     "items-center",
-    "text-base",
+    "text-sm",
     "text-title",
     "font-medium",
     "duration-300",
@@ -58,6 +58,8 @@ function Header() {
         "left-0",
         "z-100",
         "bg-zinc-50",
+        "sm:top-[initial]",
+        "sm:bottom-0",
         headerShadow ? "shadow-[0px_-1px_4px_rgba(0,0,0,0.15)]" : "shadow-none",
       )}
     >
@@ -76,10 +78,10 @@ function Header() {
         <div
           className={classNames(
             "sm:fixed",
+            "sm:sticky",
             "sm:-bottom-full",
             "sm:left-0",
             "sm:w-full",
-            "sm:px-6",
             "sm:bg-zinc-50",
             "sm:pt-2",
             "sm:py-12",
@@ -87,13 +89,11 @@ function Header() {
             "xs:pt-8",
             "xs:px-1",
             "xs:pb-12",
-            showMenu
-              ? "shadow-[0px_-1px_4px_rgba(0,0,0,0.15)]"
-              : "sm:shadow-none",
+            showMenu ? "sm:bottom-0" : "",
           )}
         >
           <ul className="mt-5 flex gap-x-8 sm:mt-0 sm:grid sm:grid-cols-3 sm:gap-8 xs:gap-0">
-            <li className="nav-item">
+            <li aria-labelledby="navigation item">
               <a
                 href="#home"
                 onClick={() => setActiveNav("#home")}
@@ -107,7 +107,7 @@ function Header() {
               </a>
             </li>
 
-            <li className="nav-item">
+            <li aria-labelledby="navigation item">
               <a
                 href="#about"
                 onClick={() => setActiveNav("#about")}
@@ -121,7 +121,7 @@ function Header() {
               </a>
             </li>
 
-            <li className="nav-item">
+            <li aria-labelledby="navigation item">
               <a
                 href="#skills"
                 onClick={() => setActiveNav("#skills")}
@@ -135,7 +135,7 @@ function Header() {
               </a>
             </li>
 
-            <li className="nav-item">
+            <li aria-labelledby="navigation item">
               <a
                 href="#portfolio"
                 onClick={() => setActiveNav("#portfolio")}
@@ -149,7 +149,7 @@ function Header() {
               </a>
             </li>
 
-            <li className="nav-item">
+            <li aria-labelledby="navigation item">
               <a
                 href="#contact"
                 onClick={() => setActiveNav("#contact")}
@@ -163,9 +163,15 @@ function Header() {
               </a>
             </li>
           </ul>
-          <button onClick={() => setToggleMenu(!showMenu)} type="button">
-            {/* <i className="uil uil-times nav-close" /> */}
-            <GoX className={iconClass} />
+          <button
+            onClick={() => {
+              setToggleMenu(!showMenu);
+              console.log(showMenu);
+            }}
+            type="button"
+          >
+            {/* <i className="uil uil-times nav-close" /> */}exit
+            <GoX className="hidden cursor-pointer bg-zinc-50 text-title sm:absolute sm:right-1 sm:top-0 sm:block sm:text-2xl  sm:hover:text-black" />
           </button>
         </div>
         <button
