@@ -11,7 +11,6 @@ module.exports = {
         'poppins': ['Poppins', 'sans-serif'],
       },
       fontSize: {
-        small: '0.875rem',
         xl: '1.25rem',
         '2xl': '1.5rem',
         '3xl': '2.25rem',

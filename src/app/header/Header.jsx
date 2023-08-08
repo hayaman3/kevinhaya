@@ -1,6 +1,7 @@
 "use client";
-import classNames from "classnames";
 import React, { useState, useEffect } from "react";
+import classNames from "classnames";
+import { IconContext } from "react-icons";
 import {
   GoHome,
   GoPerson,
@@ -25,15 +26,6 @@ function Header() {
   const [showMenu, setToggleMenu] = useState(false);
   const [activeNav, setActiveNav] = useState("#home");
   const [headerShadow, setheaderShadow] = useState(false);
-
-  const iconClass = classNames(
-    "hidden",
-    "bg-zinc-50",
-    "text-xl",
-    "sm:block",
-    "sm:text-sm",
-    "sm:block",
-  );
 
   const navLinkClass = classNames(
     "flex",
@@ -74,11 +66,10 @@ function Header() {
 					gap-x-4
 			"
       >
-        <h1 className="font-bold text-title">&lt; Kevin / &gt;</h1>
+        <h1 className="font-semibold text-title">&lt; Kevin / &gt;</h1>
         <div
           className={classNames(
             "sm:fixed",
-            "sm:sticky",
             "sm:-bottom-full",
             "sm:left-0",
             "sm:w-full",
@@ -93,75 +84,79 @@ function Header() {
           )}
         >
           <ul className="mt-5 flex gap-x-8 sm:mt-0 sm:grid sm:grid-cols-3 sm:gap-8 xs:gap-0">
-            <li aria-labelledby="navigation item">
-              <a
-                href="#home"
-                onClick={() => setActiveNav("#home")}
-                className={classNames(
-                  navLinkClass,
-                  activeNav === "#home" ? navActiveLinkClass : "",
-                )}
-              >
-                <GoHome className={iconClass} />
-                Home
-              </a>
-            </li>
+            <IconContext.Provider
+              value={{ className: "hidden text-xl sm:block" }}
+            >
+              <li aria-labelledby="navigation item">
+                <a
+                  href="#home"
+                  onClick={() => setActiveNav("#home")}
+                  className={classNames(
+                    navLinkClass,
+                    activeNav === "#home" ? navActiveLinkClass : "",
+                  )}
+                >
+                  <GoHome />
+                  Home
+                </a>
+              </li>
 
-            <li aria-labelledby="navigation item">
-              <a
-                href="#about"
-                onClick={() => setActiveNav("#about")}
-                className={classNames(
-                  navLinkClass,
-                  activeNav === "#about" ? navActiveLinkClass : "",
-                )}
-              >
-                <GoPerson className={iconClass} />
-                About
-              </a>
-            </li>
+              <li aria-labelledby="navigation item">
+                <a
+                  href="#about"
+                  onClick={() => setActiveNav("#about")}
+                  className={classNames(
+                    navLinkClass,
+                    activeNav === "#about" ? navActiveLinkClass : "",
+                  )}
+                >
+                  <GoPerson />
+                  About
+                </a>
+              </li>
 
-            <li aria-labelledby="navigation item">
-              <a
-                href="#skills"
-                onClick={() => setActiveNav("#skills")}
-                className={classNames(
-                  navLinkClass,
-                  activeNav === "#skills" ? navActiveLinkClass : "",
-                )}
-              >
-                <GoProjectRoadmap className={iconClass} />
-                Skills
-              </a>
-            </li>
+              <li aria-labelledby="navigation item">
+                <a
+                  href="#skills"
+                  onClick={() => setActiveNav("#skills")}
+                  className={classNames(
+                    navLinkClass,
+                    activeNav === "#skills" ? navActiveLinkClass : "",
+                  )}
+                >
+                  <GoProjectRoadmap />
+                  Skills
+                </a>
+              </li>
 
-            <li aria-labelledby="navigation item">
-              <a
-                href="#portfolio"
-                onClick={() => setActiveNav("#portfolio")}
-                className={classNames(
-                  navLinkClass,
-                  activeNav === "#portfolio" ? navActiveLinkClass : "",
-                )}
-              >
-                <GoImage className={iconClass} />
-                Portfolio
-              </a>
-            </li>
+              <li aria-labelledby="navigation item">
+                <a
+                  href="#portfolio"
+                  onClick={() => setActiveNav("#portfolio")}
+                  className={classNames(
+                    navLinkClass,
+                    activeNav === "#portfolio" ? navActiveLinkClass : "",
+                  )}
+                >
+                  <GoImage />
+                  Portfolio
+                </a>
+              </li>
 
-            <li aria-labelledby="navigation item">
-              <a
-                href="#contact"
-                onClick={() => setActiveNav("#contact")}
-                className={classNames(
-                  navLinkClass,
-                  activeNav === "#contact" ? navActiveLinkClass : "",
-                )}
-              >
-                <GoMail className={iconClass} />
-                Contact
-              </a>
-            </li>
+              <li aria-labelledby="navigation item">
+                <a
+                  href="#contact"
+                  onClick={() => setActiveNav("#contact")}
+                  className={classNames(
+                    navLinkClass,
+                    activeNav === "#contact" ? navActiveLinkClass : "",
+                  )}
+                >
+                  <GoMail />
+                  Contact
+                </a>
+              </li>
+            </IconContext.Provider>
           </ul>
           <button
             onClick={() => {
@@ -170,7 +165,7 @@ function Header() {
             }}
             type="button"
           >
-            {/* <i className="uil uil-times nav-close" /> */}exit
+            {/* <i className="uil uil-times nav-close" /> */}
             <GoX className="hidden cursor-pointer bg-zinc-50 text-title sm:absolute sm:right-1 sm:top-0 sm:block sm:text-2xl  sm:hover:text-black" />
           </button>
         </div>
@@ -180,7 +175,7 @@ function Header() {
           type="button"
         >
           {/* <i className="uil uil-apps" /> */}
-          <GrAppsRounded className={iconClass} />
+          <GrAppsRounded />
         </button>
       </nav>
     </header>
