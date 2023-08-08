@@ -23,7 +23,7 @@ function Header() {
     });
   }, []);
 
-  const [showMenu, setToggleMenu] = useState(false);
+  const [showMenu, setToggleMenu] = useState(true);
   const [activeNav, setActiveNav] = useState("#home");
   const [headerShadow, setheaderShadow] = useState(false);
 
@@ -58,12 +58,16 @@ function Header() {
       <nav
         aria-labelledby="page navigation"
         className="
-					container 
-					flex 
-					h-[calc(var(--header-height)+1.5rem)] 
+          mx-auto
+          flex
+					h-[4.5rem]
+					max-w-[968px]
 					items-center
 					justify-between
 					gap-x-4
+					sm:h-12
+          md:mx-6
+          xs:mx-4
 			"
       >
         <h1 className="font-semibold text-title">&lt; Kevin / &gt;</h1>
@@ -74,8 +78,9 @@ function Header() {
             "sm:left-0",
             "sm:w-full",
             "sm:bg-zinc-50",
-            "sm:pt-2",
-            "sm:py-12",
+            "sm:pt-8",
+            "sm:pb-12",
+            "sm:px-6",
             "sm:shadow-[0px_-1px_4px_rgba(0,0,0,0.15)]",
             "xs:pt-8",
             "xs:px-1",
@@ -83,7 +88,7 @@ function Header() {
             showMenu ? "sm:bottom-0" : "",
           )}
         >
-          <ul className="mt-5 flex gap-x-8 sm:mt-0 sm:grid sm:grid-cols-3 sm:gap-8 xs:gap-0">
+          <ul className="mt-5 flex gap-x-8 sm:grid sm:grid-cols-[repeat(3,1fr)] sm:gap-8 sm:font-bold xs:gap-0">
             <IconContext.Provider
               value={{ className: "hidden text-xl sm:block" }}
             >
@@ -165,12 +170,11 @@ function Header() {
             }}
             type="button"
           >
-            {/* <i className="uil uil-times nav-close" /> */}
-            <GoX className="hidden cursor-pointer bg-zinc-50 text-title sm:absolute sm:right-1 sm:top-0 sm:block sm:text-2xl  sm:hover:text-black" />
+            <GoX className=" hidden cursor-pointer bg-zinc-50 stroke-1 text-title sm:absolute sm:right-2 sm:top-2 sm:block sm:text-xl  sm:hover:text-black" />
           </button>
         </div>
         <button
-          // className="nav-showMenu"
+          className="hidden bg-zinc-50 font-normal text-title sm:block sm:text-lg"
           onClick={() => setToggleMenu(!showMenu)}
           type="button"
         >
@@ -183,3 +187,6 @@ function Header() {
 }
 
 export default Header;
+
+// color: var(--title-color);
+// font-weight: var(--font-medium);

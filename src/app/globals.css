@@ -51,23 +51,9 @@
   --z-modal: 1000;
 }
 
-.container {
-  max-width: 968px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media screen and (max-width: 992px) {
-  .container {
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
-  }
-}
-
-@media screen and (max-width: 350px) {
-
-  .container {
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
-  }
-}
+/* CONTAINER 
+  max-w-[968px]
+  mx-auto
+  md:mx-6
+  xs:mx-4
+*/
