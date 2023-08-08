@@ -178,7 +178,6 @@ function Header() {
           onClick={() => setToggleMenu(!showMenu)}
           type="button"
         >
-          {/* <i className="uil uil-apps" /> */}
           <GrAppsRounded />
         </button>
       </nav>
@@ -187,6 +186,3 @@ function Header() {
 }
 
 export default Header;
-
-// color: var(--title-color);
-// font-weight: var(--font-medium);
