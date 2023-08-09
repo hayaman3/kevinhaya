@@ -22,8 +22,11 @@ module.exports = {
         sm: {max: '768px'},
         md: {max:'992px'},
       },
+      scale: {
+        '120': '1.20',
+      },
         colors: {
-      'title': '#333333',
+      'title': 'hsl(0, 0%, 20%)',
       },
     },
   },

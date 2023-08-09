@@ -23,8 +23,8 @@ function Header() {
     });
   }, []);
 
-  const [showMenu, setToggleMenu] = useState(true);
-  const [activeNav, setActiveNav] = useState("#home");
+  const [showMenu, setToggleMenu] = useState(false);
+  const [activeNav, setActiveNav] = useState("");
   const [headerShadow, setheaderShadow] = useState(false);
 
   const navLinkClass = classNames(
@@ -32,14 +32,15 @@ function Header() {
     "flex-col",
     "items-center",
     "text-sm",
+    "md:text-[.813rem]",
     "text-title",
     "font-medium",
     "duration-300",
     "hover:text-black",
-    "hover:scale-110",
+    "hover:scale-120",
   );
 
-  const navActiveLinkClass = classNames("text-black", "scale-110", "underline");
+  const navActiveLinkClass = classNames("text-black", "scale-120");
 
   return (
     <header
@@ -70,7 +71,7 @@ function Header() {
           xs:mx-4
 			"
       >
-        <h1 className="font-semibold text-title">&lt; Kevin / &gt;</h1>
+        <h1 className="font-medium text-title">&lt; Kevin / &gt;</h1>
         <div
           className={classNames(
             "sm:fixed",
@@ -97,6 +98,7 @@ function Header() {
                   href="#home"
                   onClick={() => setActiveNav("#home")}
                   className={classNames(
+                    "text-black",
                     navLinkClass,
                     activeNav === "#home" ? navActiveLinkClass : "",
                   )}
@@ -170,7 +172,7 @@ function Header() {
             }}
             type="button"
           >
-            <GoX className=" hidden cursor-pointer bg-zinc-50 stroke-1 text-title sm:absolute sm:right-2 sm:top-2 sm:block sm:text-xl  sm:hover:text-black" />
+            <GoX className=" hidden cursor-pointer bg-zinc-50 stroke-1 text-title sm:absolute sm:bottom-5 sm:right-5 sm:block sm:text-xl  sm:hover:text-black" />
           </button>
         </div>
         <button
