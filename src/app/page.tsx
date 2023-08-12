@@ -1,4 +1,4 @@
-import Header from "./header/Header";
+import { Header } from "./header/xHeader";
 import classNames from "classnames";
 
 export default function Home() {
