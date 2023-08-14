@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <Header />
       <main>
-        {/* <Home className={sectionClass}/> */}
+        <Home className={sectionClass} />
         <div className="min-h-[200vh] bg-zinc-100">asd</div>
       </main>
     </>
