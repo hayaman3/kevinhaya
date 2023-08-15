@@ -1,35 +1,42 @@
+"use client";
 import React from "react";
+import { IconContext } from "react-icons";
+import { FaLinkedin, FaGithub, FaSquareFacebook } from "react-icons/fa6";
 
-function Social() {
+const Social: React.FunctionComponent = () => {
   return (
-    <div className="home-social">
-      <a
-        href="https://github.com/hayaman3"
-        className="home-social-icon"
-        target="_blank"
-        rel="noopener noreferrer"
+    <div className="grid grid-cols-[max-content] gap-y-4">
+      <IconContext.Provider
+        value={{
+          className:
+            "text-xl text-title duration-300 hover:text-black hover:scale-120",
+        }}
       >
-        <i className="uil uil-github" />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/kevin-larry-haya-458958198/"
-        className="home-social-icon"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="uil uil-linkedin" />
-      </a>
+        <a
+          href="https://github.com/hayaman3"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/kevin-larry-haya-458958198/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin />
+        </a>
 
-      <a
-        href="https://www.facebook.com/kevinlarry.haya/"
-        className="home-social-icon"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="uil uil-facebook" />
-      </a>
+        <a
+          href="https://www.facebook.com/kevinlarry.haya/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaSquareFacebook />
+        </a>
+      </IconContext.Provider>
     </div>
   );
-}
+};
 
 export default Social;

@@ -12,7 +12,7 @@ import {
 } from "react-icons/go";
 import { GrAppsRounded } from "react-icons/gr";
 
-export const Header: FunctionComponent = () => {
+const Header: FunctionComponent = () => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY >= 80) {
@@ -186,3 +186,5 @@ export const Header: FunctionComponent = () => {
     </header>
   );
 };
+
+export default Header;

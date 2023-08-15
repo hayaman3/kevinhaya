@@ -1,4 +1,4 @@
-import { Header } from "./header/xHeader";
+import Header from "./header/xHeader";
 import classNames from "classnames";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <Home className={sectionClass} />
+        {/* <Home className={} /> */}
         <div className="min-h-[200vh] bg-zinc-100">asd</div>
       </main>
     </>
