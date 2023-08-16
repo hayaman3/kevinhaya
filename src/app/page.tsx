@@ -1,7 +1,8 @@
 import Header from "./header/xHeader";
+import Home from "./home/Home";
 import classNames from "classnames";
 
-export default function Home() {
+export default function Main() {
   const sectionClass = classNames(
     "pt-24",
     "pb-8",
@@ -15,7 +16,7 @@ export default function Home() {
     <>
       <Header />
       <main>
-        {/* <Home className={} /> */}
+        <Home />
         <div className="min-h-[200vh] bg-zinc-100">asd</div>
       </main>
     </>
