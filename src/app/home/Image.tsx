@@ -5,9 +5,22 @@ interface Image {
   // no props
 }
 
+const imageStyle = {
+  filter: "grayscale(60%)",
+};
+
 const ProfileImage: FunctionComponent = () => {
   return (
-    <Image src="/./images/kevin.png" width={500} height={500} alt="logo" />
+    <Image
+      src="/./images/kevin.png"
+      alt="logo"
+      priority={true}
+      // width={300}
+      // height={300}
+      fill={true}
+      objectFit="contain"
+      style={imageStyle}
+    />
   );
 };
 
