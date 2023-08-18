@@ -28,6 +28,27 @@ module.exports = {
         colors: {
       'title': 'hsl(0, 0%, 20%)',
       },
+      keyframes: {
+        wave: {
+          '0%': { transform: 'rotate(0.0deg)' },
+          '10%': { transform: 'rotate(14deg)' },
+          '20%': { transform: 'rotate(-8deg)' },
+          '30%': { transform: 'rotate(14deg)' },
+          '40%': { transform: 'rotate(-4deg)' },
+          '50%': { transform: 'rotate(10.0deg)' },
+          '60%': { transform: 'rotate(0.0deg)' },
+          '100%': { transform: 'rotate(0.0deg)' },
+        },
+        'profile-animate': {
+          '0%' :{'border-radius': '60% 40% 30% 70%/60% 30% 70% 40%'},
+          '50%': {'border-radius': '300% 60% 70% 40%/50% 60% 30% 60%'},
+          '100%': {'border-radius': "60% 40% 30% 70%/60% 30% 70% 40%" },
+        },
+      },
+      animation: {
+        'waving-hand': 'wave 2s linear infinite',
+        'border': 'profile-animate 8s ease-in-out infinite 1s',
+      },
     },
   },
   plugins: [],
