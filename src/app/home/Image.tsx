@@ -1,26 +1,23 @@
 import React, { FunctionComponent } from "react";
 import Image from "next/image";
 
-interface Image {
-  // no props
-}
-
-const imageStyle = {
-  filter: "grayscale(60%)",
-};
+const containerStyle: string =
+  "sm:justify-self initial relative order-1 h-[300px] w-[300px] justify-self-center shadow-[inset_0_0_0_9px_rgb(255_255_255/_30%)] sm:order-[initial] sm:h-[200px] sm:w-[200px] sm:shadow-[inset_0_0_0_6px_rgb(255_255_255/_30%)] md:h-[250px] md:w-[250px] md:shadow-[inset_0_0_0_8px_rgb(255_255_255/_30%)]";
 
 const ProfileImage: FunctionComponent = () => {
   return (
-    <Image
-      src="/./images/kevin.png"
-      alt="logo"
-      priority={true}
-      // width={300}
-      // height={300}
-      fill={true}
-      objectFit="contain"
-      style={imageStyle}
-    />
+    <div className={containerStyle}>
+      <Image
+        src="/./images/kevin.png"
+        alt="logo"
+        priority={true}
+        fill={true}
+        sizes="(max-width: 768px) 200px, (max-width: 992px) 250px, 300px"
+        placeholder="blur"
+        blurDataURL={"/./images/kevin.png"}
+        className="-z-10 object-cover grayscale-[60%]"
+      />
+    </div>
   );
 };
 

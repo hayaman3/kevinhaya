@@ -9,7 +9,7 @@ export default function Main() {
       <Header />
       <main>
         <Home sectionClass={sectionClass} />
-        <div className="min-h-[200vh] bg-zinc-100">asd</div>
+        <div className="min-h-[200vh] bg-zinc-100">Spacer for testing</div>
       </main>
     </>
   );
