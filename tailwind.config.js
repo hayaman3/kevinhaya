@@ -6,6 +6,12 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      md: {max:'992px'},
+      sm: {max: '768px'},
+      ss: {max: '576px'},
+      xs: {max: '350px'},
+    },
     extend: {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
@@ -16,12 +22,7 @@ module.exports = {
         '3xl': '2.25rem',
         '4xl': '2.5rem',
       },
-      screens: {
-        xs: {max: '350px'},
-        ss: {max: '576px'},
-        sm: {max: '768px'},
-        md: {max:'992px'},
-      },
+
       scale: {
         '120': '1.20',
       },
