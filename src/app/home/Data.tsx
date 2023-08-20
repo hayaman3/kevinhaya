@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 
-function Data() {
+const Data: FunctionComponent = () => {
   return (
-    <div className="home-data">
-      <h1 className="home-title">
+    <div className="sm:col-[1/3]">
+      <h1 className="mb-1 text-4xl text-title md:text-[2rem]">
         Kevin Larry Haya
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -82,6 +82,6 @@ function Data() {
       </a>
     </div>
   );
-}
+};
 
 export default Data;

@@ -26,7 +26,6 @@ const Social: React.FunctionComponent = () => {
         >
           <FaLinkedin />
         </a>
-
         <a
           href="https://www.facebook.com/kevinlarry.haya/"
           target="_blank"
