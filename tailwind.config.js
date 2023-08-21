@@ -17,7 +17,7 @@ module.exports = {
         'poppins': ['Poppins', 'sans-serif'],
       },
       fontSize: {
-        xl: '1.25rem',
+        'xl': '1.25rem',
         '2xl': '1.5rem',
         '3xl': '2.25rem',
         '4xl': '2.5rem',
@@ -47,7 +47,7 @@ module.exports = {
         },
       },
       animation: {
-        'waving-hand': 'wave 2s linear infinite',
+        'waving-hand': 'wave 3s linear infinite',
         'border': 'profile-animate 8s ease-in-out infinite 1s',
       },
     },
