@@ -10,8 +10,8 @@ const ProfileImage: FunctionComponent = () => {
       <Image
         src="/./images/kevin.png"
         alt="logo"
-        priority={true}
-        fill={true}
+        priority
+        fill
         sizes="(max-width: 768px) 200px, (max-width: 992px) 250px, 300px"
         placeholder="blur"
         blurDataURL={"/./images/kevin.png"}
