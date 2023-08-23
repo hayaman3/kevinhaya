@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import Social from "./Social";
 import ProfileImage from "./Image";
-import Data from "./Data";
+import Data from "./data/Data";
 import ScrollDown from "./ScrollDown";
 
 interface StyleProps {

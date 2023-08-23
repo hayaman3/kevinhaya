@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import Typewriter from "./Typewriter";
 
 const Data: FunctionComponent = () => {
   return (
@@ -54,9 +55,13 @@ const Data: FunctionComponent = () => {
         </svg>
       </h1>
 
-      <h3 className="relative mb-4 text-xl font-normal text-title md:text-base">
+      {/* <h3 className="relative mb-4 text-xl font-normal text-title md:text-base">
         Front end Developer / Mechanical Engineer
-      </h3>
+      </h3> */}
+      <Typewriter
+        texts={["Front end Developer", "Mechanical Engineer"]}
+        delay={100}
+      />
 
       <a
         href="#contact"
