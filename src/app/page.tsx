@@ -1,4 +1,4 @@
-import Header from "./header/xHeader";
+import Header from "./header/Header";
 import Home from "./home/Home";
 
 export default function Main() {

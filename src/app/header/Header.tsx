@@ -49,11 +49,13 @@ const Header: FunctionComponent = () => {
         "fixed",
         "top-0",
         "left-0",
-        "z-100",
+        "z-50",
         "bg-zinc-50",
         "sm:top-[initial]",
         "sm:bottom-0",
-        headerShadow ? "shadow-[0px_-1px_4px_rgba(0,0,0,0.15)]" : "shadow-none",
+        headerShadow
+          ? "opacity-95 shadow-[0px_-1px_4px_rgba(0,0,0,0.15)]"
+          : "shadow-none",
       )}
     >
       <nav
@@ -66,8 +68,8 @@ const Header: FunctionComponent = () => {
 					items-center
 					justify-between
 					gap-x-4
-					sm:h-12
-          md:mx-6
+					md:mx-6
+          sm:h-12
           xs:mx-4
 			"
       >
