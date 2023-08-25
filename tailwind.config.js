@@ -45,10 +45,17 @@ module.exports = {
           '50%': {'border-radius': '300% 60% 70% 40%/50% 60% 30% 60%'},
           '100%': {'border-radius': "60% 40% 30% 70%/60% 30% 70% 40%" },
         },
+        'scroll': {
+          '0%': {'transfrom': 'translateY(0)'},
+          '50%': {'border-radius': '300% 60% 70% 40%/50% 60% 30% 60%'},
+          '30%': {'transform': 'translateY(3.75rem)'}
+        },
+
       },
       animation: {
         'waving-hand': 'wave 3s linear infinite',
         'border': 'profile-animate 8s ease-in-out infinite 1s',
+        'wheel': 'scroll 2s ease infinite',
       },
     },
   },

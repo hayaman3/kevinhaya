@@ -20,6 +20,7 @@ const Home: FunctionComponent<StyleProps> = ({ sectionClass }) => {
           <ProfileImage />
           <Data />
         </div>
+        <ScrollDown />
       </div>
     </section>
   );
