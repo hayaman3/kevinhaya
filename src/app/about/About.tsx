@@ -1,10 +1,10 @@
-import React from 'react';
-import './about.css';
-import myImage from '../../assets/images/kevin.png';
-import Info from './Info';
+import React, { FunctionComponent } from "react";
+import "./about.css";
+import myImage from "../../assets/images/kevin.png";
+import Info from "./Info";
 // import CV
 
-function About() {
+const About: FunctionComponent = () => {
   return (
     <section className="about section" id="about">
       <h2 className="section-title">About Me</h2>
@@ -16,8 +16,8 @@ function About() {
         <div className="about-data">
           <Info />
           <p className="about-description">
-            Self-taught front-end developer. Naturally curious, and
-            perpetually working on improving myself.
+            I'm a self-taught front-end developer with an inherent curiosity,
+            constantly dedicated to enhancing my skills and knowledge.
           </p>
           {/* <p className="home-description">
         I love creating and figuring out how things work
@@ -54,7 +54,6 @@ function About() {
       </div>
     </section>
   );
-}
+};
 
 export default About;
-

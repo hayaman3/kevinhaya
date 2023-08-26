@@ -47,7 +47,7 @@ const Typewriter: React.FC<TypewriterProps> = ({ texts, delay }) => {
 
   return (
     <div className="h-12">
-      <h3 className="relative mb-4 text-xl font-normal text-title md:text-base">
+      <h3 className="mb-4 ml-2 inline-block text-xl font-normal text-title md:text-base">
         {currentText}
       </h3>
     </div>

@@ -4,10 +4,12 @@ import Typewriter from "./Typewriter";
 const Data: FunctionComponent = () => {
   return (
     <div className="sm:col-[1/3]">
-      <h1 className="mb-1 text-4xl font-semibold text-title md:text-[2rem]">
+      <h1 className="mb-1 flex flex-wrap items-center text-4xl font-semibold text-title md:text-[2rem]">
         Kevin Larry Haya
         <svg
           xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
           viewBox="0 0 48 48"
           fill="none"
           className="ml-[0.4rem] h-[38px] w-[38px] hover:animate-waving-hand md:h-[26px] md:w-[26px] xs:h-[26px] xs:w-[26px]"
@@ -55,9 +57,6 @@ const Data: FunctionComponent = () => {
         </svg>
       </h1>
 
-      {/* <h3 className="relative mb-4 text-xl font-normal text-title md:text-base">
-        Front end Developer / Mechanical Engineer
-      </h3> */}
       <Typewriter
         texts={["Front end Developer", "Mechanical Engineer"]}
         delay={100}
