@@ -45,13 +45,7 @@ const Typewriter: React.FC<TypewriterProps> = ({ texts, delay }) => {
     return () => clearTimeout(timeout);
   }, [currentIndex, delay, texts, currentWordIndex, showingFirstWord]);
 
-  return (
-    <div className="h-12">
-      <h3 className="mb-4 ml-2 inline-block text-xl font-normal text-title md:text-base">
-        {currentText}
-      </h3>
-    </div>
-  );
+  return <>{currentText}</>;
 };
 
 export default Typewriter;

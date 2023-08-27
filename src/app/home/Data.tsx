@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import Typewriter from "./Typewriter";
+import Typewriter from "../utils/Typewriter";
 
 const Data: FunctionComponent = () => {
   return (
@@ -57,10 +57,14 @@ const Data: FunctionComponent = () => {
         </svg>
       </h1>
 
-      <Typewriter
-        texts={["Front end Developer", "Mechanical Engineer"]}
-        delay={100}
-      />
+      <div className="h-12">
+        <h3 className="mb-4 ml-2 inline-block text-xl font-normal text-title md:text-base">
+          <Typewriter
+            texts={["Front end Developer", "Mechanical Engineer"]}
+            delay={100}
+          />
+        </h3>
+      </div>
 
       <a
         href="#contact"
