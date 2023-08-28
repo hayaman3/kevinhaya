@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import Info from "./Info";
+import ImageCard from "./Image";
 // import CV
 
 interface StyleProps {
@@ -18,7 +19,7 @@ const About: FunctionComponent<StyleProps> = ({ sectionClass }) => {
 
       <div className="about-container container grid">
         {/* <img src={myImage} alt="kevin haya" className="about-image" /> */}
-
+        <ImageCard />
         <div className="about-data">
           <Info />
           <p className="about-description">
