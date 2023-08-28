@@ -1,17 +1,23 @@
 import React, { FunctionComponent } from "react";
-import "./about.css";
-import myImage from "../../assets/images/kevin.png";
 import Info from "./Info";
 // import CV
 
-const About: FunctionComponent = () => {
+interface StyleProps {
+  sectionClass: string;
+}
+
+const About: FunctionComponent<StyleProps> = ({ sectionClass }) => {
   return (
+    //   <section
+    //   className={`${sectionClass} flex content-center justify-center`}
+    //   id="about"
+    // >
     <section className="about section" id="about">
       <h2 className="section-title">About Me</h2>
       <span className="section-subtitle">My Introduction</span>
 
       <div className="about-container container grid">
-        <img src={myImage} alt="kevin haya" className="about-image" />
+        {/* <img src={myImage} alt="kevin haya" className="about-image" /> */}
 
         <div className="about-data">
           <Info />
@@ -19,9 +25,6 @@ const About: FunctionComponent = () => {
             I'm a self-taught front-end developer with an inherent curiosity,
             constantly dedicated to enhancing my skills and knowledge.
           </p>
-          {/* <p className="home-description">
-        I love creating and figuring out how things work
-      </p> */}
           <a download="" href="{CV}" className="button button-flex">
             Download CV&nbsp;
             <svg
