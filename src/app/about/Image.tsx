@@ -1,18 +1,18 @@
 import React, { FunctionComponent } from "react";
 import Image from "next/image";
 
-const ImageCard: FunctionComponent = () => {
+const AboutImage: FunctionComponent = () => {
   return (
-    <div className="relative h-[350px] w-[350px] justify-self-center overflow-hidden rounded-3xl md:h-[220px]  md:w-[220px]">
+    <div className="relative h-[300px] w-[300px] justify-self-center overflow-hidden rounded-3xl md:h-[220px]  md:w-[220px]">
       <Image
         src="/./images/kevin.png"
-        alt="profile image"
+        alt="about image"
         fill
-        sizes="(max-width: 992px) 220px, 350px"
+        sizes="(max-width: 992px) 220px, 300px"
         className="-z-10 object-cover grayscale-[60%]"
       />
     </div>
   );
 };
 
-export default ImageCard;
+export default AboutImage;
