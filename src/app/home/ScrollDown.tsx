@@ -40,12 +40,9 @@ const ScrollDown: FunctionComponent = () => {
           />
         </svg>
         <span className="ml-0 mr-1 font-medium text-title">Scroll Down</span>
-        {/* change */}
         <BsArrowDownShort
           style={{ color: "hsl(0, 0%, 20%)", fontSize: "1.25rem" }}
         />
-
-        <i className="uil uil-arrow-down home-scroll-arrow" />
       </a>
     </div>
   );
