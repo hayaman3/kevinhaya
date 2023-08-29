@@ -2,9 +2,9 @@ import Header from "./header/Header";
 import Home from "./home/Home";
 import About from "./about/About";
 
-export default function Main() {
-  const sectionClass = "pt-24 pb-8 px-0 sm:pt-8 sm:pb-16 sm:px-0";
+const sectionClass = "pt-24 pb-8 px-0 sm:pt-8 sm:pb-16 sm:px-0";
 
+export default function Main() {
   return (
     <>
       <Header />
