@@ -1,59 +1,17 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './qualification.css';
+import React from "react";
+import QualificationCard from "./QualificationCard";
+import "./qualification.css";
 
 function Qualification() {
-  const [isVisible, setVisible] = useState(false);
-  const visibilityRefs = Array(5)
-    .fill()
-    .map(() => useRef(null));
-
-  const handleIntersect = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setVisible(true);
-      }
-    });
-  };
-
-  // const [touched, setToched]= useState({})
-
-  const observer = new IntersectionObserver(handleIntersect, {
-    root: null,
-    // rootMargin: '-100px 0px',
-    threshold: 0.8,
-  });
-
-  useEffect(() => {
-    visibilityRefs.forEach((ref) => {
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-    });
-
-    return () => {
-      visibilityRefs.forEach((ref) => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-        }
-      });
-    };
-  }, [visibilityRefs, observer]);
-
   return (
     <section className="qualification section" id="qualifications">
-      <h2 className="section-title">Qualification</h2>
+      <QualificationCard />
+      {/* <h2 className="section-title">Qualification</h2>
       <span className="section-subtitle">My Journey</span>
 
       <div className="qualification-container container">
-        <div
-          ref={visibilityRefs[0]}
-          className={
-            isVisible
-              ? 'qualification-data show'
-              : 'qualification-data hidden'
-          }
-        >
-          <div>
+        <div>
+          <div className="qualification-data show">
             <h3 className="qualification-title">Web Development</h3>
             <span className="qualification-subtitle">
               <a
@@ -77,14 +35,7 @@ function Qualification() {
           </div>
         </div>
 
-        <div
-          ref={visibilityRefs[1]}
-          className={
-            isVisible
-              ? 'qualification-data show'
-              : 'qualification-data hidden'
-          }
-        >
+        <div className="qualification-data show">
           <div />
           <div>
             <span className="qualification-rounder" />
@@ -110,18 +61,9 @@ function Qualification() {
           </div>
         </div>
 
-        <div
-          ref={visibilityRefs[2]}
-          className={
-            isVisible
-              ? 'qualification-data show'
-              : 'qualification-data hidden'
-          }
-        >
+        <div className="qualification-data show">
           <div>
-            <h3 className="qualification-title">
-              Introduction to Python
-            </h3>
+            <h3 className="qualification-title">Introduction to Python</h3>
             <span className="qualification-subtitle">
               <a
                 href="https://www.facebook.com/topreviewcenter"
@@ -144,23 +86,14 @@ function Qualification() {
           </div>
         </div>
 
-        <div
-          ref={visibilityRefs[3]}
-          className={
-            isVisible
-              ? 'qualification-data show'
-              : 'qualification-data hidden'
-          }
-        >
+        <div className="qualification-data show">
           <div />
           <div>
             <span className="qualification-rounder" />
             <span className="qualification-line" />
           </div>
           <div>
-            <h3 className="qualification-title">
-              Java Programming Language
-            </h3>
+            <h3 className="qualification-title">Java Programming Language</h3>
             <span className="qualification-subtitle">
               <a
                 href="https://informatics.edu.ph/"
@@ -178,18 +111,9 @@ function Qualification() {
           </div>
         </div>
 
-        <div
-          ref={visibilityRefs[4]}
-          className={
-            isVisible
-              ? 'qualification-data show'
-              : 'qualification-data hidden'
-          }
-        >
+        <div className="qualification-data show">
           <div>
-            <h3 className="qualification-title">
-              C Programming Language
-            </h3>
+            <h3 className="qualification-title">C Programming Language</h3>
             <span className="qualification-subtitle">
               <a
                 href="https://informatics.edu.ph/"
@@ -212,23 +136,14 @@ function Qualification() {
           </div>
         </div>
 
-        <div
-          ref={visibilityRefs[5]}
-          className={
-            isVisible
-              ? 'qualification-data show'
-              : 'qualification-data hidden'
-          }
-        >
+        <div className="qualification-data show">
           <div />
           <div>
             <span className="qualification-rounder" />
             <span className="qualification-line" />
           </div>
           <div>
-            <h3 className="qualification-title">
-              Mechanical Engineering
-            </h3>
+            <h3 className="qualification-title">Mechanical Engineering</h3>
             <span className="qualification-subtitle">
               <a
                 href="https://www.slu.edu.ph/"
@@ -245,10 +160,9 @@ function Qualification() {
             </div>
           </div>
         </div>
-      </div>
+      </div>*/}
     </section>
   );
 }
 
 export default Qualification;
-
