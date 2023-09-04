@@ -14,7 +14,7 @@ export default function Main() {
         <Home sectionClass={sectionClass} />
         <About sectionClass={sectionClass} />
         <Skills sectionClass={sectionClass} />
-        <Qualification />
+        <Qualification sectionClass={sectionClass} />
         <div className="min-h-[200vh] bg-zinc-100">Spacer for testing</div>
       </main>
     </>

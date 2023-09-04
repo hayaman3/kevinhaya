@@ -1,13 +1,16 @@
 import React, { FunctionComponent } from "react";
+import QualificationCard from "./QualificationCard";
 
-export type QualificationRowProps = {
-  //no props
-};
+// type QualificationRowProps = {
+//   // link: string;
+//   // subtitle: string;
+//   // Icon: IconType;
+// };
 
-const QualificationRow: FunctionComponent<QualificationRowProps> = ({}) => {
+const QualificationRow: FunctionComponent = () => {
   return (
     <div className="qualification-data show">
-      <div>
+      {/* <div>
         <h3 className="qualification-title">Web Development</h3>
         <span className="qualification-subtitle">
           <a
@@ -23,7 +26,8 @@ const QualificationRow: FunctionComponent<QualificationRowProps> = ({}) => {
           <i className="uil uil-book-alt" />
           Udemy
         </div>
-      </div>
+      </div> */}
+      <QualificationCard />
       <div />
       <div>
         <span className="qualification-rounder" />

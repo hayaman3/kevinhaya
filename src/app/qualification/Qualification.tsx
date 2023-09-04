@@ -1,16 +1,24 @@
-import React from "react";
-import QualificationCard from "./QualificationCard";
+import React, { FunctionComponent } from "react";
+import QualificationRow from "./QualificationRow";
 import "./qualification.css";
 
-function Qualification() {
-  return (
-    <section className="qualification section" id="qualifications">
-      <QualificationCard />
-      {/* <h2 className="section-title">Qualification</h2>
-      <span className="section-subtitle">My Journey</span>
+interface StyleProps {
+  sectionClass: string;
+}
 
-      <div className="qualification-container container">
-        <div>
+const Qualification: FunctionComponent<StyleProps> = ({ sectionClass }) => {
+  return (
+    <section className={sectionClass} id="qualifications">
+      <h2 className="text-center text-3xl font-semibold text-title md:text-2xl">
+        Qualification
+      </h2>
+      <span className="mb-16 block text-center text-sm md:text-[.8rem] sm:mb-12">
+        My Journey
+      </span>
+
+      <div className="mx-auto grid max-w-[968px] justify-center md:mx-6 xs:mx-4">
+        <QualificationRow />
+        {/* <div>
           <div className="qualification-data show">
             <h3 className="qualification-title">Web Development</h3>
             <span className="qualification-subtitle">
@@ -33,7 +41,7 @@ function Qualification() {
             <span className="qualification-rounder" />
             <span className="qualification-line" />
           </div>
-        </div>
+        </div> */}
 
         <div className="qualification-data show">
           <div />
@@ -160,9 +168,9 @@ function Qualification() {
             </div>
           </div>
         </div>
-      </div>*/}
+      </div>
     </section>
   );
-}
+};
 
 export default Qualification;

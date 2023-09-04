@@ -75,7 +75,7 @@ text-center text-3xl font-semibold text-title md:text-2xl
 }
 
 .section-subtitle {
-mb-16 block text-center text-sm md:text-[.8] sm:mb-12
+mb-16 block text-center text-sm md:text-[.8rem] sm:mb-12
 }
 
  */

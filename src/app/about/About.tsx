@@ -13,7 +13,7 @@ const About: FunctionComponent<StyleProps> = ({ sectionClass }) => {
       <h2 className="text-center text-3xl font-semibold text-title md:text-2xl">
         About Me
       </h2>
-      <span className="mb-16 block text-center text-sm md:text-[.8] sm:mb-12">
+      <span className="mb-16 block text-center text-sm md:text-[.8rem] sm:mb-12">
         My Introduction
       </span>
       <div className="mx-auto grid max-w-[968px] grid-cols-[repeat(2,1fr)] items-center md:mx-6 md:grid-cols-[1fr] md:gap-y-10 xs:mx-4 ">

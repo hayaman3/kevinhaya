@@ -1,15 +1,15 @@
 import { IconType } from "react-icons";
 import { BiCalendar, BiBook, BiMapPin } from "react-icons/bi";
 
-export type QualificationObjectType = {
+export interface QualificationDataObjectType {
   title: string;
   link: string;
   linkText: string;
   Icon: IconType;
   subtitle: string;
-};
+}
 
-const qualificationData: QualificationObjectType[] = [
+export const qualificationData: QualificationDataObjectType[] = [
   {
     title: "Web Development",
     link: "https://www.theodinproject.com/",
