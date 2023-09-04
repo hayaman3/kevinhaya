@@ -28,7 +28,6 @@ const QualificationRow: FunctionComponent = () => {
         </div>
       </div> */}
       <QualificationCard />
-      <div />
       <div>
         <span className="qualification-rounder" />
         <span className="qualification-line" />
