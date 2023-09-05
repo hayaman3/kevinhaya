@@ -1,19 +1,34 @@
 import React, { FunctionComponent } from "react";
 import QualificationCard from "./QualificationCard";
 import MiddleLine from "./MiddleLine";
-// type QualificationRowProps = {
-//   // link: string;
-//   // subtitle: string;
-//   // Icon: IconType;
-// };
+import { QualificationDataObjectType } from "./QualificationCardData";
 
-const QualificationRow: FunctionComponent = () => {
+interface QualificationRowProps {
+  prop: QualificationDataObjectType;
+}
+
+const QualificationRowRight: FunctionComponent<QualificationRowProps> = ({
+  prop,
+}) => {
   return (
     <div className="grid grid-cols-[1fr_max-content_1fr] justify-center gap-x-6 sm:gap-2">
-      <QualificationCard />
+      <div></div>
       <MiddleLine />
+      <QualificationCard prop={prop} />
     </div>
   );
 };
 
-export default QualificationRow;
+const QualificationRowLeft: FunctionComponent<QualificationRowProps> = ({
+  prop,
+}) => {
+  return (
+    <div className="grid grid-cols-[1fr_max-content_1fr] justify-center gap-x-6 sm:gap-2">
+      <QualificationCard prop={prop} />
+      <MiddleLine />
+      <div></div>
+    </div>
+  );
+};
+
+export { QualificationRowRight, QualificationRowLeft };

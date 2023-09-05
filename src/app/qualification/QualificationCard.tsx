@@ -1,16 +1,14 @@
 import React, { FunctionComponent } from "react";
-import {
-  QualificationDataObjectType,
-  qualificationData,
-} from "./QualificationCardData";
+import { QualificationDataObjectType } from "./QualificationCardData";
 
 export type QualificationCardProps = {
-  //no props
+  prop: QualificationDataObjectType;
 };
 
-const { title, link, linkText, Icon, subtitle } = qualificationData[0];
-
-const QualificationCard: FunctionComponent<QualificationCardProps> = ({}) => {
+const QualificationCard: FunctionComponent<QualificationCardProps> = ({
+  prop,
+}) => {
+  const { title, link, linkText, Icon, subtitle } = prop;
   return (
     <div>
       <h3 className="text-base font-medium text-title">{title}</h3>
