@@ -24,7 +24,6 @@ const QualificationCard: FunctionComponent<QualificationCardProps> = ({}) => {
           {linkText}
         </a>
       </span>
-      {/* <div className="qualification-data-icon"> */}
       <div className="flex items-center gap-2 text-sm">
         <Icon className="text-base" />
         {subtitle}
