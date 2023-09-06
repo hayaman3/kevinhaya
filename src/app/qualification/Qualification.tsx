@@ -1,20 +1,20 @@
 import React, { FunctionComponent } from "react";
+import Section from "@/_components/Section";
+import Title from "@/_components/Title";
+import Subtitle from "@/_components/Subtitle";
 import QualificationMain from "./QualificationMain";
+
 interface StyleProps {
-  sectionClass: string;
+  //no props
 }
 
-const Qualification: FunctionComponent<StyleProps> = ({ sectionClass }) => {
+const Qualification: FunctionComponent<StyleProps> = ({}) => {
   return (
-    <section className={sectionClass} id="qualifications">
-      <h2 className="text-center text-3xl font-semibold text-title md:text-2xl">
-        Qualification
-      </h2>
-      <span className="mb-16 block text-center text-sm md:text-[.8rem] sm:mb-12">
-        My Journey
-      </span>
+    <Section id="qualification">
+      <Title>Qualification</Title>
+      <Subtitle>My Journey</Subtitle>
       <QualificationMain />
-    </section>
+    </Section>
   );
 };
 

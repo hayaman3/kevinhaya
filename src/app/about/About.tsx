@@ -1,21 +1,18 @@
 import React, { FunctionComponent } from "react";
+import Section from "@/_components/Section";
+import Title from "@/_components/Title";
+import Subtitle from "@/_components/Subtitle";
 import Info from "./Info";
 import AboutImage from "./Image";
 // import CV
 
-interface StyleProps {
-  sectionClass: string;
-}
+interface StyleProps {}
 
-const About: FunctionComponent<StyleProps> = ({ sectionClass }) => {
+const About: FunctionComponent<StyleProps> = ({}) => {
   return (
-    <section className={sectionClass} id="about">
-      <h2 className="text-center text-3xl font-semibold text-title md:text-2xl">
-        About Me
-      </h2>
-      <span className="mb-16 block text-center text-sm md:text-[.8rem] sm:mb-12">
-        My Introduction
-      </span>
+    <Section id="about">
+      <Title>About Me</Title>
+      <Subtitle>My Introduction</Subtitle>
       <div className="mx-auto grid max-w-[968px] grid-cols-[repeat(2,1fr)] items-center md:mx-6 md:grid-cols-[1fr] md:gap-y-10 xs:mx-4 ">
         <AboutImage />
         <div className="md:text-center">
@@ -24,7 +21,6 @@ const About: FunctionComponent<StyleProps> = ({ sectionClass }) => {
             I'm a self-taught front-end developer with an inherent curiosity,
             constantly dedicated to enhancing my skills and knowledge.
           </p>
-          {/* <a download="" href="{CV}" className="button button-flex"> */}
           <a
             download=""
             href="{CV}"
@@ -59,7 +55,7 @@ const About: FunctionComponent<StyleProps> = ({ sectionClass }) => {
           </a>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
