@@ -4,6 +4,7 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/_components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     screens: {
@@ -19,7 +20,7 @@ module.exports = {
       fontSize: {
         'xl': '1.25rem',
         '2xl': '1.5rem',
-        '3xl': ['2.25rem','2rem'],
+        '3xl': '2.25rem',
         '4xl': '2.5rem',
       },
       scale: {

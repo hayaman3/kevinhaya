@@ -12,7 +12,6 @@ const Section: FunctionComponent<SectionProps> = ({
   children,
 }) => {
   return (
-    // <section className="px-0 pb-8 pt-24 sm:px-0 sm:pb-16 sm:pt-8" id={id}>
     <section
       className={`px-0 pb-8 pt-24 sm:px-0 sm:pb-16 sm:pt-8 ${addedClass}`}
       id={id}

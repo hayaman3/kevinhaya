@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { SkillObjectType } from "./SkillLists";
+import { SkillObjectType } from "@/data/SkillData";
 
 type CardProps = {
   title: string;

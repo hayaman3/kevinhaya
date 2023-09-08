@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { QualificationDataObjectType } from "./QualificationCardData";
+import { QualificationDataObjectType } from "@/data/QualificationData";
 
 export type QualificationCardProps = {
   prop: QualificationDataObjectType;

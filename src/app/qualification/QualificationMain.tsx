@@ -6,7 +6,7 @@ import {
 import {
   qualificationData,
   QualificationDataObjectType,
-} from "./QualificationCardData";
+} from "@/data/QualificationData";
 
 export type QualificationMainProps = {
   //no props

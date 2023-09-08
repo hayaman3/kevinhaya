@@ -3,7 +3,11 @@ import Section from "@/_components/Section";
 import Title from "@/_components/Title";
 import Subtitle from "@/_components/Subtitle";
 import SkillsCard from "./SkillsCard";
-import { frontendSkills, otherSkills, SkillObjectType } from "./SkillLists";
+import {
+  frontendSkills,
+  otherSkills,
+  SkillObjectType,
+} from "../../data/SkillData";
 
 interface StyleProps {}
 
