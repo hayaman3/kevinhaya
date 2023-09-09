@@ -34,10 +34,12 @@ const ContactForm: FunctionComponent = () => {
   });
 
   return (
-    <div className="contact-content contact-form-area">
-      <h3 className="contact-title">Write me your project</h3>
-      <form className="contact-form">
-        <div className="contact-form-div">
+    <div className="min-h-[11rem]">
+      <h3 className="mb-6 text-center text-xl font-medium md:text-base">
+        Write to me
+      </h3>
+      <form className="flex w-[360px] flex-col items-center justify-center gap-8 sm:mx-auto sm:my-0 ss:w-full">
+        <div className=" relative h-16 w-full">
           <label htmlFor="name" className="contact-form-tag">
             Name
           </label>
@@ -69,7 +71,7 @@ const ContactForm: FunctionComponent = () => {
             name="message"
             cols={30}
             rows={10}
-            className="contact-form-input"
+            className="contact-form-input resize-none"
             placeholder="Your message"
           />
         </div>
