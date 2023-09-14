@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import { contactData, ContactDataObjectType } from "@/data/ContactData";
-import ContactCard from "./ContactCard";
+import ContactCard from "./links/ContactCard";
 
 export type ContactLinksProps = {
   //no props

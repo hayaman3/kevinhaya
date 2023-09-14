@@ -2,7 +2,9 @@ import React, { FunctionComponent } from "react";
 import Section from "@/_components/Section";
 import Title from "@/_components/Title";
 import Subtitle from "@/_components/Subtitle";
-import ContactMain from "./ContactMain";
+import Main from "./ContactMain";
+import ContactLinks from "./Links";
+import ContactForm from "./Form";
 
 export type ContactProps = {
   //no props
@@ -13,7 +15,10 @@ const Contact: FunctionComponent<ContactProps> = ({}) => {
     <Section id="contact">
       <Title>Contacts</Title>
       <Subtitle>Get in touch</Subtitle>
-      <ContactMain />
+      <Main>
+        <ContactLinks />
+        <ContactForm />
+      </Main>
     </Section>
   );
 };
