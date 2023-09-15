@@ -4,8 +4,7 @@ import About from "./about/About";
 import Skills from "./skills/Skills";
 import Qualification from "./qualification/Qualification";
 import Contact from "./contact/Contact";
-import ContactOld from "./contact/ContactOLd";
-import Form from "./contact/Form";
+import Activity from "./activity/Activity";
 
 export default function Main() {
   return (
@@ -17,8 +16,7 @@ export default function Main() {
         <Skills />
         <Qualification />
         <Contact />
-        {/* <ContactOld /> */}
-        {/* <Form /> */}
+        <Activity />
         <div className="min-h-[200vh] bg-zinc-100">Spacer for testing</div>
       </main>
     </>
