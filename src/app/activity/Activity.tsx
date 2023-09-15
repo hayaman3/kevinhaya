@@ -1,9 +1,13 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import Section from "@/_components/Section";
 import Title from "@/_components/Title";
 import Subtitle from "@/_components/Subtitle";
 
-function Activity() {
+export type ActivityProps = {
+  //no props
+};
+
+const Activity: FunctionComponent<ActivityProps> = ({}) => {
   return (
     <Section id="activity">
       <Title>Github Activity</Title>
@@ -26,6 +30,6 @@ function Activity() {
       />
     </Section>
   );
-}
+};
 
 export default Activity;
