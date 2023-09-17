@@ -7,7 +7,7 @@ export type SectionProps = {
 };
 
 const Section: FunctionComponent<SectionProps> = ({
-  addedClass,
+  addedClass = "",
   id,
   children,
 }) => {
