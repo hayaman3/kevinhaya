@@ -5,6 +5,8 @@ import Skills from "./skills/Skills";
 import Qualification from "./qualification/Qualification";
 import Contact from "./contact/Contact";
 import Activity from "./activity/Activity";
+import Footer from "./footer/Footer";
+import Scrollup from "./scrollup/Scrollup";
 
 export default function Main() {
   return (
@@ -17,8 +19,9 @@ export default function Main() {
         <Qualification />
         <Contact />
         <Activity />
-        <div className="min-h-[200vh] bg-zinc-100">Spacer for testing</div>
       </main>
+      <Scrollup />
+      <Footer />
     </>
   );
 }
