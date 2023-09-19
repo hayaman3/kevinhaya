@@ -26,7 +26,7 @@ const Activity: FunctionComponent<ActivityProps> = ({}) => {
       <img
         src="https://ghchart.rshah.org/hayaman3"
         alt="Github chart"
-        className="mx-auto rounded-[0.8rem] border border-solid border-[rgba(0,0,0,0.1)] bg-white p-4 grayscale-[85%]"
+        className="mx-auto rounded-[0.8rem] border border-solid border-[rgba(0,0,0,0.1)] bg-white p-4"
       />
     </Section>
   );
