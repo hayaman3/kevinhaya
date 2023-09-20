@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import Section from "@/_components/Section";
 import Title from "@/_components/Title";
 import Subtitle from "@/_components/Subtitle";
-import QualificationMain from "./QualificationMain";
+import QualificationMain from "./_components/QualificationMain";
 
 interface StyleProps {
   //no props
