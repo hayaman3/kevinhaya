@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "<Kevin/>",
+  title: "Kevin | Personal Portfolio",
   description: "Kevin Larry Haya Portfolio",
 };
 
