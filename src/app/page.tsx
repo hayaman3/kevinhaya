@@ -7,6 +7,7 @@ import Contact from "./contact/Contact";
 import Activity from "./activity/Activity";
 import Footer from "./footer/Footer";
 import Scrollup from "./scrollup/Scrollup";
+import Portfolio from "./portfolio/Portfolio";
 
 export default function Main() {
   return (
@@ -16,6 +17,7 @@ export default function Main() {
         <Home />
         <About />
         <Skills />
+        <Portfolio />
         <Qualification />
         <Contact />
         <Activity />
