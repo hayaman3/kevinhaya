@@ -15,11 +15,11 @@ const About: FunctionComponent<StyleProps> = ({}) => {
     <Section id="about">
       <Title>About Me</Title>
       <Subtitle>My Introduction</Subtitle>
-      <div className="mx-auto grid max-w-[968px] grid-cols-[repeat(2,1fr)] items-center md:mx-6 md:grid-cols-[1fr] md:gap-y-10 xs:mx-4 ">
+      <div className="mx-auto grid max-w-[968px] grid-cols-[.8fr,1fr] items-center justify-items-center md:mx-6 md:grid-cols-[1fr] md:gap-y-10 xs:mx-4 ">
         <AboutImage />
-        <div className="md:text-center">
+        <div className="flex flex-col items-center md:text-center">
           <Info />
-          <p className="mb-10 py-0 pl-0 pr-16 md:mb-8 md:px-20 md:py-0 ss:p-0">
+          <p className="mx-auto mb-10 px-12 md:mb-8 md:px-20 md:py-0 ss:p-0">
             I'm a self-taught front-end developer with an inherent curiosity,
             constantly dedicated to enhancing my skills and knowledge.
           </p>

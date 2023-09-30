@@ -9,7 +9,7 @@ const AboutImage: FunctionComponent = () => {
       width={0}
       height={0}
       sizes="100vw"
-      className="h-auto w-[300px]  rounded-xl md:w-[220px]"
+      className="h-auto w-[300px] rounded-xl md:w-[220px]"
     />
   );
 };
