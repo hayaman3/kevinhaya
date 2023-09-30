@@ -6,9 +6,9 @@ export type SubitleProps = {
 
 const Subtitle: FunctionComponent<SubitleProps> = ({ children }) => {
   return (
-    <span className="mb-16 block text-center text-sm md:text-[.8rem] sm:mb-12">
+    <p className="mb-16 block text-center text-sm md:text-[.8rem] sm:mb-12">
       {children}
-    </span>
+    </p>
   );
 };
 
