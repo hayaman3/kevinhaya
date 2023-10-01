@@ -1,20 +1,42 @@
-"use client";
-
 import React, { FunctionComponent } from "react";
-import { SendSVG } from "@/_components/SVG";
+import {
+  TbMailUp,
+  TbLoader2,
+  TbCircleCheckFilled,
+  TbMailExclamation,
+} from "react-icons/tb";
+
+type MessageStatus = "standby" | "loading" | "success" | "error";
 
 export type ButtonProps = {
-  //no props
+  messageStatus: MessageStatus;
 };
 
-const Button: FunctionComponent<ButtonProps> = ({}) => {
+const Icon: Record<MessageStatus, React.JSX.Element> = {
+  standby: <TbMailUp className="ml-2 text-[1.4rem]" />,
+  loading: <TbLoader2 className="ml-2 animate-spin text-[1.4rem]" />,
+  success: <TbCircleCheckFilled className="ml-2 text-[1.4rem]" />,
+  error: <TbMailExclamation className="ml-2 text-[1.4rem]" />,
+};
+
+const messageText: Record<MessageStatus, string> = {
+  standby: "Send Message",
+  loading: "Sending",
+  success: "Message Sent",
+  error: "Message Failed",
+};
+
+const Button: FunctionComponent<ButtonProps> = ({ messageStatus }) => {
   return (
     <button
       type="submit"
-      className="inline-flex items-center rounded-2xl bg-title px-8 py-5 font-medium text-white hover:bg-black md:px-7 md:py-4"
+      disabled={messageStatus === "loading"}
+      className={`inline-flex w-[212px] items-center justify-center rounded-2xl bg-title py-5 font-medium text-white hover:bg-black md:w-[205px] md:py-4 ${
+        messageStatus === "loading" ? "cursor-not-allowed" : ""
+      }`}
     >
-      Send Message
-      <SendSVG />
+      {messageText[messageStatus]}
+      {Icon[messageStatus]}
     </button>
   );
 };

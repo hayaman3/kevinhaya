@@ -8,26 +8,43 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { sendContactForm } from "@/lib/api";
 
-type TMessageState = "standby" | "sending" | "sent" | "failed";
+type FormValues = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+type TMessageStatus = "standby" | "loading" | "success" | "error";
 
 const ContactForm: FunctionComponent = () => {
-  const [messsageState, setMessageState] = useState<TMessageState>("standby");
+  const [messageStatus, setMessageStatus] = useState<TMessageStatus>("standby");
+
+  const handleSuccess = () => {
+    setMessageStatus("success");
+    setTimeout(() => {
+      setMessageStatus("standby");
+    }, 5000);
+  };
+
+  const handleError = (error: Error) => {
+    setMessageStatus("error");
+    console.error("Error sending email:", error);
+    setTimeout(() => {
+      setMessageStatus("standby");
+    }, 6000);
+  };
 
   const handleSubmit = async (
     values: any,
     { setSubmitting, resetForm }: any,
   ) => {
-    setMessageState("sending");
+    setMessageStatus("loading");
     try {
       await sendContactForm(values);
-      setMessageState("sent");
-    } catch (error) {
-      setMessageState("failed");
-      console.error("Error sending email:", error);
+      handleSuccess();
+    } catch (error: any) {
+      handleError(error);
     }
-    setTimeout(() => {
-      setMessageState("standby");
-    }, 3000);
   };
 
   return (
@@ -82,7 +99,7 @@ const ContactForm: FunctionComponent = () => {
             />
           </InputRow>
 
-          <Button messsageState={messsageState} />
+          <Button messageStatus={messageStatus} />
         </Form>
       </Formik>
     </div>
