@@ -5,8 +5,8 @@ import { HandSvg, SendSVG } from "@/_components/SVG";
 
 const Data: FunctionComponent = () => {
   return (
-    <div className="sm:col-[1/3]">
-      <h1 className="mb-1 flex flex-wrap items-center text-4xl font-semibold text-title md:text-[2rem]">
+    <div className="flex flex-col sm:col-[1/3]">
+      <h1 className="mb-1 flex flex-wrap items-center text-4xl font-semibold text-title md:text-[1.8rem]">
         Kevin Larry Haya
         <HandSvg />
       </h1>
@@ -20,7 +20,7 @@ const Data: FunctionComponent = () => {
         </h3>
       </div>
 
-      <LinkSvg href="#contact">
+      <LinkSvg href="#contact" classNameProp="self-start sm:self-center">
         Say Hello
         <SendSVG />
       </LinkSvg>
