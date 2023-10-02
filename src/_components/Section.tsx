@@ -1,19 +1,19 @@
 import React, { FunctionComponent } from "react";
 
 export type SectionProps = {
-  addedClass?: string;
+  classNameProp?: string;
   id?: string;
   children: React.ReactNode;
 };
 
 const Section: FunctionComponent<SectionProps> = ({
-  addedClass = "",
+  classNameProp = "",
   id,
   children,
 }) => {
   return (
     <section
-      className={`px-0 pb-8 pt-24 sm:px-0 sm:pb-16 sm:pt-8 ${addedClass}`}
+      className={`px-0 pb-8 pt-24 sm:px-0 sm:pb-16 sm:pt-8 ${classNameProp}`}
       id={id}
     >
       {children}
