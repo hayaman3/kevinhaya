@@ -4,8 +4,10 @@
 
 @layer utilities {
   .scrollbar::-webkit-scrollbar {
-    width: 20px;
-    height: 15px;
+    width: 15px;
+    height: 10px;
+    position: absolute;
+    top: -110px;
   }
 
   .scrollbar::-webkit-scrollbar-track {
@@ -15,7 +17,6 @@
   .scrollbar::-webkit-scrollbar-thumb {
     background: rgb(208, 208, 208);
     border-radius: 100vh;
-    border: 3px solid #f6f7ed;
   }
 
   .scrollbar::-webkit-scrollbar-thumb:hover {

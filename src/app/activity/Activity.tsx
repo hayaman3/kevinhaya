@@ -23,7 +23,7 @@ const Activity: FunctionComponent<ActivityProps> = ({}) => {
           </a>
         </span>
       </Subtitle>
-      <div className="scrollbar overflow-x-auto">
+      <div className="scrollbar overflow-x-auto p-4">
         <img
           src="https://ghchart.rshah.org/hayaman3"
           alt="Github activity chart"
