@@ -24,7 +24,7 @@ const QualificationRowLeft: FunctionComponent<QualificationRowProps> = ({
 }) => {
   return (
     <div className="grid grid-cols-[1fr_max-content_1fr] justify-center gap-x-6 sm:gap-2">
-      <QualificationCard prop={prop} />
+      <QualificationCard prop={prop} side={"left"} />
       <MiddleLine />
       <div></div>
     </div>
