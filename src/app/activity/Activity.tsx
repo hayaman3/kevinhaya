@@ -23,11 +23,13 @@ const Activity: FunctionComponent<ActivityProps> = ({}) => {
           </a>
         </span>
       </Subtitle>
-      <img
-        src="https://ghchart.rshah.org/hayaman3"
-        alt="Github chart"
-        className="mx-auto rounded-[0.8rem] border border-solid border-[rgba(0,0,0,0.1)] bg-white p-4"
-      />
+      <div className="scrollbar overflow-x-auto">
+        <img
+          src="https://ghchart.rshah.org/hayaman3"
+          alt="Github activity chart"
+          className="mx-auto min-w-[550px] rounded-[0.8rem] border border-solid border-[rgba(0,0,0,0.1)] bg-white p-4"
+        />
+      </div>
     </Section>
   );
 };
