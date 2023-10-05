@@ -32,11 +32,11 @@ const Button: FunctionComponent<ButtonProps> = ({ messageStatus }) => {
       type="submit"
       disabled={messageStatus === "loading"}
       className={`inline-flex w-[212px] items-center justify-center rounded-2xl bg-title py-5 font-medium text-white hover:bg-black md:w-[205px] md:py-4 ${
-        messageStatus === "loading" ? "cursor-not-allowed" : ""
+        messageStatus === "loading" ? "cursor-not-allowed opacity-70" : ""
       }`}
     >
-      {messageText[messageStatus]}
-      {Icon[messageStatus]}
+      <span>{messageText[messageStatus]}</span>
+      <span>{Icon[messageStatus]}</span>
     </button>
   );
 };
