@@ -5,7 +5,7 @@ import { FaLinkedin, FaGithub, FaSquareFacebook } from "react-icons/fa6";
 
 const Social: React.FunctionComponent = () => {
   return (
-    <div className="grid grid-cols-[max-content] gap-y-4">
+    <div className="grid grid-cols-[max-content] justify-center gap-y-4">
       <IconContext.Provider
         value={{
           className:
