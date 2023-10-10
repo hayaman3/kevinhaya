@@ -5,6 +5,24 @@ export type ImageComponentProps = {
   title: string;
 };
 
+export interface porftolioDataObjectType {
+  title: string;
+  src: string;
+  alt: string;
+}
+
+// export const porftolioData: porftolioDataObjectType[] = [
+//   {
+
+//   },
+//   {
+
+//   },
+//   {
+
+//   },
+// ];
+
 const ImageComponent: FunctionComponent<ImageComponentProps> = ({ title }) => {
   return (
     <>

@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import Section from "@/_components/Section";
 import Title from "@/_components/Title";
 import Subtitle from "@/_components/Subtitle";
-import PortfolioMain from "./_components/PortfolioMain";
+import PortfolioMain from "./PortfolioMain";
 
 export type PortfolioProps = {
   //no props
