@@ -13,13 +13,13 @@ import {
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiC, SiPhp, SiCplusplus } from "react-icons/si";
 
-export type SkillObjectType = {
+export type TskillsData = {
   Icon: IconType;
   skill: string;
   subtitle?: string;
 };
 
-const frontendSkills: SkillObjectType[] = [
+const frontendSkillsData: TskillsData[] = [
   {
     Icon: BiLogoHtml5,
     skill: "HTML",
@@ -54,7 +54,7 @@ const frontendSkills: SkillObjectType[] = [
   },
 ];
 
-const otherSkills: SkillObjectType[] = [
+const otherSkillsData: TskillsData[] = [
   {
     Icon: SiC,
     skill: "C",
@@ -82,4 +82,4 @@ const otherSkills: SkillObjectType[] = [
   },
 ];
 
-export { frontendSkills, otherSkills };
+export { frontendSkillsData, otherSkillsData };

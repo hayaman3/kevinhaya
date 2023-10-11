@@ -5,12 +5,12 @@ import {
 } from "react-icons/bi";
 import { IconType } from "react-icons";
 
-export type pageLinksDataObjectType = {
+export type TpageLinksData = {
   title: string;
   href: string;
 };
 
-export const pageLinksData: pageLinksDataObjectType[] = [
+export const pageLinksData: TpageLinksData[] = [
   {
     title: "About",
     href: "#about",
@@ -25,12 +25,12 @@ export const pageLinksData: pageLinksDataObjectType[] = [
   },
 ];
 
-export type socialLinksDataObjectType = {
+export type TsocialLinksData = {
   Icon: IconType;
   href: string;
 };
 
-export const socialLinksData: socialLinksDataObjectType[] = [
+export const socialLinksData: TsocialLinksData[] = [
   {
     Icon: BiLogoGithub,
     href: "https://github.com/hayaman3",

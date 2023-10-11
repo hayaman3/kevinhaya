@@ -1,7 +1,7 @@
 import { IconType } from "react-icons";
 import { BiCalendar, BiBook, BiMapPin } from "react-icons/bi";
 
-export interface QualificationDataObjectType {
+export interface TqualificationData {
   title: string;
   link: string;
   linkText: string;
@@ -9,7 +9,7 @@ export interface QualificationDataObjectType {
   subtitle: string;
 }
 
-export const qualificationData: QualificationDataObjectType[] = [
+export const qualificationData: TqualificationData[] = [
   {
     title: "Web Development",
     link: "https://www.theodinproject.com/",

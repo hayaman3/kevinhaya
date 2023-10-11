@@ -1,7 +1,7 @@
 import { IconType } from "react-icons";
 import { BiMailSend, BiLogoMessenger, BiMap } from "react-icons/bi";
 
-export interface ContactDataObjectType {
+export interface TcontactData {
   Icon: IconType;
   title: string;
   subtitle: string;
@@ -9,7 +9,7 @@ export interface ContactDataObjectType {
   linkText: string;
 }
 
-export const contactData: ContactDataObjectType[] = [
+export const contactData: TcontactData[] = [
   {
     Icon: BiMailSend,
     title: "Email",
