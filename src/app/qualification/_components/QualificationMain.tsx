@@ -5,7 +5,7 @@ import {
 } from "./QualificationRow";
 import {
   qualificationData,
-  QualificationDataObjectType,
+  TqualificationData,
 } from "@/data/QualificationData";
 
 export type QualificationMainProps = {

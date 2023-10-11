@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { socialLinksData, socialLinksDataObjectType } from "@/data/FooterData";
+import { socialLinksData, TsocialLinksData } from "@/data/FooterData";
 
 export type FooterSocialsLinksProps = {
   //no props

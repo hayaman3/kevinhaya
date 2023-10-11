@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from "react";
-import { SkillObjectType } from "@/data/SkillData";
+import { TskillsData } from "@/data/SkillData";
 
 type CardProps = {
   title: string;
-  skill: SkillObjectType[];
+  skill: TskillsData[];
 };
 
 const SkillsCard: FunctionComponent<CardProps> = ({ title, skill }) => {

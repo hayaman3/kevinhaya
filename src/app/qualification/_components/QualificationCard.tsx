@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from "react";
-import { QualificationDataObjectType } from "@/data/QualificationData";
+import { TqualificationData } from "@/data/QualificationData";
 
 export type QualificationCardProps = {
-  prop: QualificationDataObjectType;
+  prop: TqualificationData;
   side?: "left" | "right";
 };
 

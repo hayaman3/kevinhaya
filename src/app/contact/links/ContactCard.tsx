@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from "react";
-import { ContactDataObjectType } from "@/data/ContactData";
+import { TcontactData } from "@/data/ContactData";
 import { BiRightArrowAlt } from "react-icons/bi";
 
 export type ContactCardsProps = {
-  prop: ContactDataObjectType;
+  prop: TcontactData;
 };
 
 const ContactCards: FunctionComponent<ContactCardsProps> = ({ prop }) => {

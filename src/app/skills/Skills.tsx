@@ -5,9 +5,9 @@ import Subtitle from "@/_components/Subtitle";
 import SkillsCard from "./_components/SkillsCard";
 import SkillsMain from "./_components/SkillsMain";
 import {
-  frontendSkills,
-  otherSkills,
-  SkillObjectType,
+  frontendSkillsData,
+  otherSkillsData,
+  TskillsData,
 } from "../../data/SkillData";
 
 interface StyleProps {}
@@ -18,8 +18,8 @@ const Skills: FunctionComponent<StyleProps> = ({}) => {
       <Title>Skills</Title>
       <Subtitle>My Technical Skills</Subtitle>
       <SkillsMain>
-        <SkillsCard title="Frontend Developement" skill={frontendSkills} />
-        <SkillsCard title="Other Languages" skill={otherSkills} />
+        <SkillsCard title="Frontend Developement" skill={frontendSkillsData} />
+        <SkillsCard title="Other Languages" skill={otherSkillsData} />
       </SkillsMain>
     </Section>
   );

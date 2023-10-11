@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from "react";
 import QualificationCard from "./QualificationCard";
 import MiddleLine from "./MiddleLine";
-import { QualificationDataObjectType } from "../../../data/QualificationData";
+import { TqualificationData } from "../../../data/QualificationData";
 
 interface QualificationRowProps {
-  prop: QualificationDataObjectType;
+  prop: TqualificationData;
 }
 
 const QualificationRowRight: FunctionComponent<QualificationRowProps> = ({

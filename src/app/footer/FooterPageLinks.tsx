@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { pageLinksData, pageLinksDataObjectType } from "@/data/FooterData";
+import { pageLinksData, TpageLinksData } from "@/data/FooterData";
 
 export type FooterPageLinksProps = {
   //no props
