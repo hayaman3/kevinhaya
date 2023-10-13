@@ -15,7 +15,7 @@ const Cell: FunctionComponent<CellProps> = ({
 }) => {
   return (
     <div
-      className={`col-span-${col} row-span-${row} relative overflow-hidden rounded-2xl bg-white ${classNameProp}`}
+      className={`col-span-${col} row-span-${row} group relative overflow-hidden rounded-2xl bg-white ${classNameProp}`}
     >
       {children}
     </div>

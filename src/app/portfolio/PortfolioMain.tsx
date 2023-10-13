@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 import Image from "next/image";
 import ImageComponent from "./_components/Image";
 import Cell from "./_components/Cell";
+import Info from "./_components/Info";
 import { portfolioData, TportfolioData } from "@/data/PortfolioData";
 
 export type PortfolioMainProps = {

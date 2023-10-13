@@ -6,7 +6,7 @@ export interface TportfolioData {
 export const portfolioData: TportfolioData[] = [
   {
     title: "Performance Depot",
-    src: "/./images/portfolio/trial.png",
+    src: "/./images/portfolio/grey.jpg",
   },
   {
     title: "Performance Depot",
