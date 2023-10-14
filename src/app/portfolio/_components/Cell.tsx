@@ -8,8 +8,8 @@ export type CellProps = {
 };
 
 const Cell: FunctionComponent<CellProps> = ({
-  row = 1,
-  col = 1,
+  row,
+  col,
   classNameProp = "",
   children,
 }) => {
