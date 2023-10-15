@@ -16,6 +16,7 @@ const PortfolioMain: FunctionComponent<PortfolioMainProps> = ({}) => {
     <div className="mx-auto grid aspect-[2/3] max-w-[992px] grid-cols-4 grid-rows-6 gap-4 p-4">
       <Cell row={2} col={2} classNameProp={testStyle}>
         <ImageComponent props={portfolioData[0]} />
+        <Info />
       </Cell>
 
       <Cell row={1} col={1} classNameProp={testStyle}>
