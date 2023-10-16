@@ -6,6 +6,12 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/_components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    'col-span-2',
+    'col-span-1',
+    'row-span-2',
+    'row-span-1',
+  ],
   theme: {
     screens: {
       md: {max:'992px'},
