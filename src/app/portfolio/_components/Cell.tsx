@@ -16,17 +16,12 @@ const Cell: FunctionComponent<CellProps> = ({
   data,
   classNameProp = "",
 }) => {
-  // const ImageData
-  // const InfoData
-
-  const { title, src } = data;
-
   return (
     <div
-      className={`col-span-${col} row-span-${row} group relative overflow-hidden rounded-2xl bg-white ${classNameProp}`}
+      className={`col-span-${col} row-span-${row} group relative grid place-content-center overflow-hidden rounded-2xl bg-white ${classNameProp}`}
     >
       <ImageComponent props={data} />
-      <Info title={title} />
+      <Info title={data.title} />
     </div>
   );
 };
