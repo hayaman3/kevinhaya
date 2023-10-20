@@ -1,14 +1,18 @@
 import React, { FunctionComponent } from "react";
+import { HiMiniArrowUpRight } from "react-icons/hi2";
 
 export type InfoProps = {
-  title: string;
+  href: string;
 };
 
-const Info: FunctionComponent<InfoProps> = ({ title }) => {
+const Info: FunctionComponent<InfoProps> = ({ href }) => {
   return (
-    <div className="h-full w-full rounded-md border border-gray-100 bg-gray-200 bg-opacity-10 bg-clip-padding p-4 opacity-0 backdrop-blur-lg backdrop-filter transition duration-300 ease-in-out group-hover:opacity-100">
-      <span className="text-ellipsis text-white">{title}</span>
-    </div>
+    <a
+      href={href}
+      className="absolute bottom-3 left-3 flex cursor-pointer items-center overflow-hidden rounded-full bg-title p-1 transition-shadow delay-[0s] duration-[0.2s] ease-[ease-out]"
+    >
+      <HiMiniArrowUpRight className="text-zinc-50" />
+    </a>
   );
 };
 
