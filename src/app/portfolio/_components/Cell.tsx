@@ -21,7 +21,7 @@ const Cell: FunctionComponent<CellProps> = ({
       className={`col-span-${col} row-span-${row} group relative grid place-content-center overflow-hidden rounded-2xl bg-white ${classNameProp}`}
     >
       <ImageComponent props={data} />
-      <Info title={data.title} />
+      <Info href={data.href} />
     </div>
   );
 };

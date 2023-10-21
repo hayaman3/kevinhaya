@@ -23,6 +23,9 @@ module.exports = {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
       },
+      boxShadow: {
+        'effect': "0px 0px 0px 1px rgb(255, 255, 255), 0px 0px 0px 6px rgba(255, 255, 255, 0.5)",
+      },
       fontSize: {
         'xl': '1.25rem',
         '2xl': '1.5rem',
