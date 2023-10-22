@@ -23,9 +23,6 @@ module.exports = {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
       },
-      boxShadow: {
-        'effect': "0px 0px 0px 1px rgb(255, 255, 255), 0px 0px 0px 6px rgba(255, 255, 255, 0.5)",
-      },
       fontSize: {
         'xl': '1.25rem',
         '2xl': '1.5rem',
@@ -55,7 +52,7 @@ module.exports = {
           '100%': {'border-radius': "60% 40% 30% 70%/60% 30% 70% 40%" },
         },
         'scroll': {
-          '0%': {'transfrom': 'translateY(0)'},
+          '0%': {'transform': 'translateY(0)'},
           '50%': {'border-radius': '300% 60% 70% 40%/50% 60% 30% 60%'},
           '30%': {'transform': 'translateY(3.75rem)'}
         },

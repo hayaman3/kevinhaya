@@ -7,18 +7,12 @@ export type CellProps = {
   row: 1 | 2;
   col: 1 | 2;
   data: TportfolioData;
-  classNameProp?: string;
 };
 
-const Cell: FunctionComponent<CellProps> = ({
-  row,
-  col,
-  data,
-  classNameProp = "",
-}) => {
+const Cell: FunctionComponent<CellProps> = ({ row, col, data }) => {
   return (
     <div
-      className={`col-span-${col} row-span-${row} group relative grid place-content-center overflow-hidden rounded-2xl bg-white ${classNameProp}`}
+      className={`col-span-${col} row-span-${row} relative grid place-content-center overflow-hidden rounded-2xl border-[1px] border-[rgba(0,0,0,0.1)] bg-white`}
     >
       <ImageComponent props={data} />
       <Info href={data.href} />

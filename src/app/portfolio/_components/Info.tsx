@@ -7,20 +7,15 @@ export type InfoProps = {
 
 const Info: FunctionComponent<InfoProps> = ({ href }) => {
   return href ? (
-    // <div className="absolute bottom-3 left-3 outline-none hover:outline-2">
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      // className="absolute bottom-3 left-3  flex cursor-pointer items-center overflow-hidden rounded-full bg-[rgb(117,117,117)] p-1 transition-shadow delay-[0s] duration-[0.2s] ease-[ease-out]"
-      className="shadow-3xl absolute bottom-3 left-3 flex cursor-pointer  items-center rounded-full border border-gray-300 bg-[rgb(117,117,117)] p-1 hover:border-4 hover:border-blue-500 "
-
-      // transition-shadow duration-[0.2s] ease-[ease-out] delay-[0s] shadow-[rgb(255,255,255)_0px_0px_0px_1px,rgba(255,255,255,0.5)_0px_0px_0px_6px]
+      className="absolute bottom-3 left-3 box-border flex cursor-pointer items-center rounded-full border-[1px] border-[rgba(0,0,0,0.3)] p-1 transition-all delay-[0s] duration-[0.1s] ease-linear hover:outline hover:outline-4 hover:outline-[#d7d7d79a]"
     >
-      <HiMiniArrowUpRight className="text-zinc-50" />
+      <HiMiniArrowUpRight className="text-title" />
     </a>
-  ) : // </div>
-  null;
+  ) : null;
 };
 
 export default Info;
