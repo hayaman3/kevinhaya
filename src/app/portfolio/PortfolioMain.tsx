@@ -8,9 +8,6 @@ export type PortfolioMainProps = {
   //no props
 };
 
-const testStyle = "border-[1px] border-[rgba(0,0,0,0.1)]";
-// const testStyle = "";
-
 const PortfolioMain: FunctionComponent<PortfolioMainProps> = ({}) => {
   return (
     <div className="mx-auto grid aspect-[2/3] max-w-[992px] grid-cols-4 grid-rows-6 gap-4 p-4">
