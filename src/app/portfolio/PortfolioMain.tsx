@@ -12,7 +12,8 @@ const PortfolioMain: FunctionComponent<PortfolioMainProps> = ({}) => {
     <div
       className={classNames(
         "mx-auto grid aspect-[2/3] max-w-[992px] grid-cols-4 grid-rows-6 gap-4 p-4",
-        "ss:aspect-auto ss:auto-cols-[300px] ss:auto-rows-[300px]",
+        // "ss:aspect-auto ss:auto-cols-[300px] ss:auto-rows-[300px]",
+        "ss:flex ss:flex-col",
       )}
     >
       <Cell row={2} col={2} data={portfolioData[1]} />

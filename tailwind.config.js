@@ -11,6 +11,10 @@ module.exports = {
     'col-span-1',
     'row-span-2',
     'row-span-1',
+    'w-[150px]',
+    'w-[300px]',
+    'h-[150px]"',
+    'h-[300px]',
   ],
   theme: {
     screens: {
