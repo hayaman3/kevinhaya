@@ -1,6 +1,4 @@
 import React, { FunctionComponent } from "react";
-import Image from "next/image";
-import ImageComponent from "./_components/Image";
 import Cell from "./_components/Cell";
 import { portfolioData, TportfolioData } from "@/data/PortfolioData";
 import classNames from "classnames";
