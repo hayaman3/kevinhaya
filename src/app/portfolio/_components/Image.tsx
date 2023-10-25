@@ -8,7 +8,7 @@ export type ImageComponentProps = {
 
 const ImageComponent: FunctionComponent<ImageComponentProps> = ({ props }) => {
   const { src, title } = props;
-  return <Image src={src} alt={title} layout="fill" className="object-cover" />;
+  return <Image src={src} alt={title} fill className="object-cover" />;
 };
 
 export default ImageComponent;
