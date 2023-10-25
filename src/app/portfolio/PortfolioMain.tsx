@@ -12,29 +12,29 @@ const PortfolioMain: FunctionComponent<PortfolioMainProps> = ({}) => {
     <div
       className={classNames(
         "mx-auto grid aspect-[2/3] max-w-[992px] grid-cols-4 grid-rows-6 gap-4 p-4",
-        // "ss:aspect-auto ss:auto-cols-[300px] ss:auto-rows-[300px]",
-        "ss:flex ss:flex-col",
+        "sm:mx-16 sm:aspect-[1/6] sm:grid-cols-2 sm:grid-rows-[repeat(14,minmax(0,1fr))] sm:gap-3 ",
+        "ss:mx-8 ss:gap-2",
       )}
     >
-      <Cell row={2} col={2} data={portfolioData[1]} />
+      <Cell variant={"bigSquare"} data={portfolioData[1]} />
 
-      <Cell row={1} col={1} data={portfolioData[0]} />
+      <Cell variant={"smallSquare"} data={portfolioData[0]} />
 
-      <Cell row={2} col={1} data={portfolioData[3]} />
+      <Cell variant={"portrait"} data={portfolioData[3]} />
 
-      <Cell row={2} col={1} data={portfolioData[0]} />
+      <Cell variant={"portrait"} data={portfolioData[0]} />
 
-      <Cell row={1} col={2} data={portfolioData[0]} />
+      <Cell variant={"landscape"} data={portfolioData[0]} />
 
-      <Cell row={1} col={1} data={portfolioData[2]} />
+      <Cell variant={"smallSquare"} data={portfolioData[2]} />
 
-      <Cell row={2} col={2} data={portfolioData[0]} />
+      <Cell variant={"bigSquare"} data={portfolioData[0]} />
 
-      <Cell row={1} col={2} data={portfolioData[0]} />
+      <Cell variant={"landscape"} data={portfolioData[0]} />
 
-      <Cell row={2} col={2} data={portfolioData[0]} />
+      <Cell variant={"bigSquare"} data={portfolioData[0]} />
 
-      <Cell row={1} col={2} data={portfolioData[0]} />
+      <Cell variant={"landscape"} data={portfolioData[0]} />
     </div>
   );
 };

@@ -4,32 +4,27 @@ import { TportfolioData } from "@/data/PortfolioData";
 import Info from "./Info";
 import classNames from "classnames";
 
-const width = {
-  1: "w-[150px]",
-  2: "w-[300px]",
-};
+type Variants = "portrait" | "landscape" | "smallSquare" | "bigSquare";
 
-const height = {
-  1: "h-[150px]",
-  2: "h-[300px]",
+const variantStyle: { [key in Variants]: string } = {
+  portrait: "col-span-1 row-span-2",
+  landscape: "col-span-2 row-span-1",
+  smallSquare: "col-span-1 row-span-1",
+  bigSquare: "col-span-2 row-span-2",
 };
 
 export type CellProps = {
-  row: 1 | 2;
-  col: 1 | 2;
+  variant: Variants;
   data: TportfolioData;
 };
 
-const Cell: FunctionComponent<CellProps> = ({ row, col, data }) => {
+const Cell: FunctionComponent<CellProps> = ({ variant, data }) => {
   return (
     <div
       className={classNames(
-        `col-span-${col} row-span-${row}`,
-        " relative grid place-content-center overflow-hidden",
+        "relative grid place-content-center overflow-hidden",
         "rounded-2xl border-[1px] border-[rgba(0,0,0,0.1)] bg-white",
-        // "ss:grid-cols-1 ss:grid-rows-1",
-        `ss:${height[row]}`,
-        `ss:${width[col]}`,
+        `${variantStyle[variant]}`,
       )}
     >
       <ImageComponent props={data} />
