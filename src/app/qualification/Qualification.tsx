@@ -10,7 +10,7 @@ interface StyleProps {
 
 const Qualification: FunctionComponent<StyleProps> = ({}) => {
   return (
-    <Section id="qualification">
+    <Section id="qualifications">
       <Title>Qualification</Title>
       <Subtitle>My Journey</Subtitle>
       <QualificationMain />

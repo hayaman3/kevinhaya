@@ -10,7 +10,7 @@ export type PortfolioProps = {
 
 const Portfolio: FunctionComponent<PortfolioProps> = ({}) => {
   return (
-    <Section id="portfolio">
+    <Section id="projects">
       <Title>Portfolio</Title>
       <Subtitle>Some of my Works</Subtitle>
       <PortfolioMain />
