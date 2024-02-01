@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { BiCalendar, BiBook, BiMapPin } from "react-icons/bi";
+import { BiCalendar, BiBook, BiMapPin, BiLogoDevTo } from "react-icons/bi";
 
 export interface TqualificationData {
   title: string;
@@ -10,6 +10,13 @@ export interface TqualificationData {
 }
 
 export const qualificationData: TqualificationData[] = [
+  {
+    title: "Front-end Intern",
+    link: "https://codebility-fe.vercel.app/",
+    linkText: "Website",
+    Icon: BiLogoDevTo,
+    subtitle: "Codebility",
+  },
   {
     title: "Web Development",
     link: "https://www.theodinproject.com/",
@@ -33,6 +40,13 @@ export const qualificationData: TqualificationData[] = [
   },
   {
     title: "Java Programming Language",
+    link: "https://informatics.edu.ph/",
+    linkText: "Informatics",
+    Icon: BiMapPin,
+    subtitle: "Baguio City",
+  },
+  {
+    title: "C Programming Language",
     link: "https://informatics.edu.ph/",
     linkText: "Informatics",
     Icon: BiMapPin,
