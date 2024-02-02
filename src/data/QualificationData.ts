@@ -11,7 +11,7 @@ export interface TqualificationData {
 
 export const qualificationData: TqualificationData[] = [
   {
-    title: "Front-end Intern",
+    title: "Front-end Engineer Internship",
     link: "https://codebility-fe.vercel.app/",
     linkText: "Website",
     Icon: BiLogoDevTo,
