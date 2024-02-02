@@ -5,7 +5,6 @@ const AboutImage: FunctionComponent = () => {
   return (
     <Image
       alt="kevin graduation loopsie"
-      // src="/./images/kevin-graduation-loopsie.jpg"
       src="/images/kevin-graduation-loopsie.jpg"
       width={0}
       height={0}
