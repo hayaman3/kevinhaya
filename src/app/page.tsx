@@ -17,7 +17,7 @@ export default function Main() {
         <Home />
         <About />
         <Skills />
-        {/* <Portfolio /> */}
+        <Portfolio />
         <Qualification />
         <Contact />
         <Activity />
